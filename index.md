@@ -30,14 +30,14 @@ Uma luva capturadora de movimentos usando sensores óticos de flexão e replica�
 
 ## Análise de Riscos (possibilidade, gravidade):
 
- - Problema: sensores e atuadores defeituosos (5, 1)
-   -Solução: comprar novos ali na Beta
+- Problema: sensores e atuadores defeituosos (5, 1)
+  -Solução: comprar novos ali na Beta
  
- - Problema: defeito no Raspberry (3, 3)
-   -Solução: comprar novo Raspberry
+- Problema: defeito no Raspberry (3, 3)
+  -Solução: comprar novo Raspberry
      
- - Problema: falta de precisão nos sensores construídos (2, 3)
-   -Solução: Desenvolver algoritmo de tratamento dos dados (já levado em conta no cronograma)
+- Problema: falta de precisão nos sensores construídos (2, 3)
+  - Solução: Desenvolver algoritmo de tratamento dos dados (já levado em conta no cronograma)
      
 ## Cronograma
 
