@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+# Mirror Hand
+Luva de captura de movimentos e mão robótica que replica os movimentos (nome bosta, vamo troca)
 
-You can use the [editor on GitHub](https://github.com/kiqdestro/mirrorHand/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Problema:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  <p align="justify">Hoje em dia existem muitas ferramentas de captura de movimento corporal, umas das aplicações mais comuns são o uso em games e realidade virtual. Porém existe uma possibilidade ainda não tão barata e difundida que é a de reproduzir movimentos humanos em máquinas, o que abre possibilidade para derrubar barreiras físicas. Por exemplo, existem lugares no Brasil, distantes dos grandes centros, onde não é possível encontrar médicos de todas as especialidades, sendo assim, algumas pessoas precisam se deslocar grandes distâncias para encontrar algum profissional da saúde que possa resolver seu problema.</p>
+  
+## Escopo em alto nível:
 
-### Markdown
+  <p align="justify">O propósito do projeto é possibilitar que os movimentos da mão de uma pessoa possam ser reproduzidos numa espécie de réplica robótica. Sendo assim, o problema apresenta três desafios. O primeiro é encontrar uma maneira de capturar os movimentos da mão do usuário e transformar em dados que possamos trabalhar. O segundo é construir a mão mecânica que replicará os movimentos. O terceiro é desenvolver uma maneira de interfacear os dados obtidos pelos movimentos da mão para a mão mecânica.
+  A intenção aqui é, através de uma luva de dados (*data glove*), replicar os movimentos dos cinco dedos da mão, porém, apenas o movimento de abrir e fechar individualmente, com duas articulações em cada dedo (não será possível reproduzir a saudação vulcana).</p>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Integração:
 
-```markdown
-Syntax highlighted code block
+- Programação 1 e 2:
+  Conhecimento básico de programação para desenvolver o interfaceamento entre a luva e a mão.
 
-# Header 1
-## Header 2
-### Header 3
+- Introdução à Prática de Laboratório, Eletricidade, Circuitos Elétricos/Digitais:
+  Trabalhar com circuitos contendo sensores e atuadores.
+  
+- Desenho Técnico e Análise e Projeto de Sistemas:
+  Elaborar, diagramar e projetar o sistema.
 
-- Bulleted
-- List
+## Análise de Riscos (possibilidade, gravidade):
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kiqdestro/mirrorHand/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+ - Problema: sensores e atuadores defeituosos (5, 1)
+     Solução: comprar novos ali na Beta
