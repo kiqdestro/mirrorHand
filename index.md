@@ -37,7 +37,10 @@ Uma luva capturadora de movimentos usando sensores óticos de flexão e replica�
   * Solução: comprar novo Raspberry
      
 - Problema: falta de precisão nos sensores construídos (2, 3)
-  * Solução: Desenvolver algoritmo de tratamento dos dados (já levado em conta no cronograma)
+  * Solução: desenvolver algoritmo de tratamento dos dados (já levado em conta no cronograma)
+
+- Problema: um integrante da equipe desistir da matéria (1, 5)
+  * Solução: o integrante que sobrar vai ter que trabalhar em dobro
      
 ## Cronograma
 
