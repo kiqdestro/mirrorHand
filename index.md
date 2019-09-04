@@ -7,7 +7,7 @@ Luva de captura de movimentos e mão robótica que replica os movimentos (nome b
   
 ## Escopo em alto nível:
 
-  <p align="justify">O propósito do projeto é possibilitar que os movimentos da mão de uma pessoa possam ser reproduzidos numa espécie de réplica robótica. Sendo assim, o problema apresenta três desafios. O primeiro é encontrar uma maneira de capturar os movimentos da mão do usuário e transformar em dados que possamos trabalhar. O segundo é construir a mão mecânica que replicará os movimentos. O terceiro é desenvolver uma maneira de interfacear os dados obtidos pelos movimentos da mão para a mão mecânica.
+  <p align="justify">O propósito do projeto é possibilitar que os movimentos da mão de uma pessoa possam ser reproduzidos numa espécie de réplica robótica. Sendo assim, o problema apresenta três desafios. O primeiro é encontrar uma maneira de capturar os movimentos da mão do usuário e transformar em dados que possamos trabalhar. O segundo é construir a mão mecânica que replicará os movimentos. O terceiro é desenvolver uma maneira de interfacear os dados obtidos pelos movimentos da mão para a mão mecânica, o que será feito com Raspberry Pi Zero W.
   A intenção aqui é, através de uma luva de dados (*data glove*), replicar os movimentos dos cinco dedos da mão, porém, apenas o movimento de abrir e fechar individualmente, com duas articulações em cada dedo (não será possível reproduzir a saudação vulcana).</p>
 
 ## Integração:
@@ -25,3 +25,10 @@ Luva de captura de movimentos e mão robótica que replica os movimentos (nome b
 
  - Problema: sensores e atuadores defeituosos (5, 1)
      Solução: comprar novos ali na Beta
+ 
+ - Problema: defeito no Raspberry (3, 3)
+     Solução: comprar novo Raspberry
+     
+## Cronograma
+
+ - [Planilha](https://docs.google.com/spreadsheets/d/1sdC0rdNofJFcj3CUji-1BI3xQIKClVm6QFSoB1_UFPU/edit?usp=sharing)
