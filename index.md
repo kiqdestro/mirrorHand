@@ -45,3 +45,7 @@
 ## Cronograma
 
  - [Planilha](https://docs.google.com/spreadsheets/d/1sdC0rdNofJFcj3CUji-1BI3xQIKClVm6QFSoB1_UFPU/edit?usp=sharing)
+
+## Imagens de exemplo p/ apresentação
+
+ - [Imagens](https://docs.google.com/document/d/1lZfCHz8_iqgg3oapjwGZmA1cvhD7PHrdcaoKG9PNB3E/edit?usp=sharing)
