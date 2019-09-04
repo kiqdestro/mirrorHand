@@ -15,7 +15,7 @@
 ## Escopo em alto nível:
 
   <p align="justify">O propósito do projeto é possibilitar que os movimentos da mão de uma pessoa possam ser reproduzidos numa espécie de réplica robótica. Sendo assim, o problema apresenta três desafios. O primeiro é encontrar uma maneira de capturar os movimentos da mão do usuário e transformar em dados que possamos trabalhar. O segundo é construir a mão mecânica que replicará os movimentos. O terceiro é desenvolver uma maneira de interfacear os dados obtidos pelos movimentos da mão para a mão mecânica, o que será feito com Raspberry Pi Zero W.
-  A intenção aqui é, através de uma luva de dados (*data glove*), replicar os movimentos dos cinco dedos da mão, porém, apenas o movimento de abrir e fechar individualmente, com duas articulações em cada dedo (não será possível reproduzir a saudação vulcana).</p>
+  A intenção aqui é, através de uma luva de dados (*data glove*), replicar os movimentos dos cinco dedos da mão e do punho, porém, apenas o movimento de abrir e fechar individualmente cada dedo, com duas articulações apenas (não será possível reproduzir a saudação vulcana).</p>
 
 ## Integração:
 
