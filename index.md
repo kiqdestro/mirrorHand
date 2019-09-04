@@ -1,5 +1,12 @@
 # Mirror Hand
-Luva de captura de movimentos e mão robótica que replica os movimentos (nome bosta, vamo troca)
+
+Uma luva capturadora de movimentos usando sensores óticos de flexão e replicação dos movimentos capturados utilizando mão robótica.
+
+## Integrantes
+
+ - Caíque Destro (1658930) - caiquedestro@gmail.com
+
+ - João Carlos Cardoso dos Santos (1371916) - jc.cardoso4@gmail.com
 
 ## Problema:
 
