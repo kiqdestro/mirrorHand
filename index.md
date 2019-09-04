@@ -1,6 +1,6 @@
 # Mirror Hand
 
-Uma luva capturadora de movimentos usando sensores óticos de flexão e replicação dos movimentos capturados utilizando mão robótica.
+<p align="justify">Uma luva capturadora de movimentos usando sensores óticos de flexão e replicação dos movimentos capturados utilizando mão robótica.</p>
 
 ## Integrantes
 
