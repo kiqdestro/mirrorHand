@@ -20,13 +20,13 @@ Uma luva capturadora de movimentos usando sensores óticos de flexão e replica�
 ## Integração:
 
 - Programação 1 e 2:
-  Conhecimento básico de programação para desenvolver o interfaceamento entre a luva e a mão.
+  <p align="justify">Conhecimento básico de programação para desenvolver o interfaceamento entre a luva e a mão.</p>
 
 - Introdução à Prática de Laboratório, Eletricidade, Circuitos Elétricos/Digitais:
-  Trabalhar com circuitos contendo sensores e atuadores.
+  <p align="justify">Trabalhar com circuitos contendo sensores e atuadores.</p>
   
 - Desenho Técnico e Análise e Projeto de Sistemas:
-  Elaborar, diagramar e projetar o sistema.
+  <p align="justify">Elaborar, diagramar e projetar o sistema.</p>
 
 ## Análise de Riscos (possibilidade, gravidade):
 
