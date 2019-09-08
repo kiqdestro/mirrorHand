@@ -16,7 +16,28 @@
 
   <p align="justify">O propósito do projeto é possibilitar que os movimentos da mão de uma pessoa possam ser reproduzidos numa espécie de réplica robótica. Sendo assim, o problema apresenta três desafios. O primeiro é encontrar uma maneira de capturar os movimentos da mão do usuário e transformar em dados que possamos trabalhar. O segundo é construir a mão mecânica que replicará os movimentos. O terceiro é desenvolver uma maneira de interfacear os dados obtidos pelos movimentos da mão para a mão mecânica, o que será feito com Raspberry Pi Zero W.
   A intenção aqui é, através de uma luva de dados (<i>data glove</i>), replicar os movimentos dos cinco dedos da mão e do punho, porém, apenas o movimento de abrir e fechar individualmente cada dedo, com duas articulações apenas (não será possível reproduzir a saudação vulcana).</p>
-
+  
+## Requisitos:
+ <p align="justify">O projeto consiste de uma luva capturadora de movimentos e uma mâo mecânica que replica os movimentos capturados
+ - Requisitos da luva:
+   * Capturar o movimento das articulações interfalângicas proximais.
+   * Capturar o movimento das articulações metacarpofalângicas.
+   * Capturar movimento da articulação do pulso.
+   * Capturar rotação da mão.
+ - A luva não será capaz de:
+   * Capturar os movimentos laterais das articulações metacarpofalângicas.
+   * Capturar os movimentos laterais da articulação do pulso.
+ 
+ - Requisitos da mão mecânica
+   * Flexionar as articulações interfalângicas distais e articulações interfalângicas proximais (as duas juntas, de forma dependente)
+   * Flexionar as articulações metacarpofalângicas.
+   * Flexionar o pulso.
+   * Rotacionar o pulso.
+ - A mão mecânica não será capaz de:
+   * Flexionar as articulações metacarpofalângicas lateralmente.
+   * Flexionar as articulações interfalângicas distais e interfalângicas de forma independente.
+   * Flexionar o pulso lateralmente
+   
 ## Integração:
 
 - Programação 1 e 2:
