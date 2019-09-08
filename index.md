@@ -18,7 +18,7 @@
   A intenção aqui é, através de uma luva de dados (<i>data glove</i>), replicar os movimentos dos cinco dedos da mão e do punho, porém, apenas o movimento de abrir e fechar individualmente cada dedo, com duas articulações apenas (não será possível reproduzir a saudação vulcana).</p>
   
 ## Requisitos:
- <p align="justify">O projeto consiste de uma luva capturadora de movimentos e uma mâo mecânica que replica os movimentos capturados
+
  - Requisitos da luva:
    * Capturar o movimento das articulações interfalângicas proximais.
    * Capturar o movimento das articulações metacarpofalângicas.
