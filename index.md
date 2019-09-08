@@ -62,6 +62,9 @@
 
 - Problema: um integrante da equipe desistir da matéria (1, 5)
   * Solução: o integrante que sobrar vai ter que trabalhar em dobro
+  
+- Problema: dificuldade na construção das articulações da mão
+  * Solução: Simplificar o projeto e/ou escolher um novo modelo de construção da mão (já definidos no pré-projeto)
      
 ## Cronograma
 
