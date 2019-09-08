@@ -71,6 +71,7 @@
 
  - [Imagens](https://docs.google.com/document/d/1lZfCHz8_iqgg3oapjwGZmA1cvhD7PHrdcaoKG9PNB3E/edit?usp=sharing)
  
-## Projeto
+## O Projeto
 
- - [luva](luva.md)
+ - [Luva](luva.md)
+ - [Mão Robótica](maomecanica.md)
