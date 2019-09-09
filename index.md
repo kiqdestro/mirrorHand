@@ -66,7 +66,7 @@
 - Problema: dificuldade na construção das articulações da mão
   * Solução: Simplificar o projeto e/ou escolher um novo modelo de construção da mão (já definidos no pré-projeto)
      
-## [Cronograma](https://docs.google.com/spreadsheets/d/1sdC0rdNofJFcj3CUji-1BI3xQIKClVm6QFSoB1_UFPU/edit?usp=sharing)
+## Cronograma
 
  - [Planilha](https://docs.google.com/spreadsheets/d/1sdC0rdNofJFcj3CUji-1BI3xQIKClVm6QFSoB1_UFPU/edit?usp=sharing)
 
