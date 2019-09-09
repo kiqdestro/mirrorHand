@@ -20,3 +20,5 @@
 
 
 ## Imagens de outros projetos e modelo da mão
+
+![otario](http://bpic.588ku.com/element_pic/18/03/06/db64b5a3fc94ce382e63c44e3952656d.jpg)
