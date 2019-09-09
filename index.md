@@ -1,6 +1,6 @@
 <!-- # [Mirror Hand](index.md) -->
 
-##<p align="justify">Uma luva capturadora de movimentos usando sensores óticos de flexão e replicação dos movimentos capturados utilizando mão robótica.</p>
+##Uma luva capturadora de movimentos usando sensores óticos de flexão e replicação dos movimentos capturados utilizando mão robótica.
 
 ### Integrantes
 
