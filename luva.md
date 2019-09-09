@@ -3,22 +3,27 @@
 ## Construção da luva
 
  <p align="justify"> A luva será construída utilizando uma luva de EPI e o que chamamos de sensor de flexão óptica, que consiste em um tubo preto com um emissor de luz em uma extremidade e um sensor de luz em outra, ao ocorrer a dobra do tubo, menos luz do emissor alcança o sensor, o que causa um sinal que pode ser interpretado pelo microcontrolador. Além disso, será utilizado um giroscópio para leitura da rotação da mão.</p>
- 
+
  <p align="justify"> Para a construção dos sensores está previsto a experimentação com diferentes tipos de sensores e materiais, com o objetivo de fazê-los da forma mais compacta e de forma que não dificulte o movimento da mão do usuário. As alternativas de sensores são:</p>
- 
+
   - Um LED como emissor de luz e um LDR em um tubo preto, já tendo sido um feito um protótipo usando a capa de um fio elétrico
     * Vantagem: é o modelo mais simples, já testado e robusto, com poucas chances de quebrar ou falhar
     * Desvantagem: o cabo é muito grosso e dificuldade a dobra da articulação; LDR não é linear
     * Testar com um tubo mais flexível
-  
+
   - Emissor IR e receptor IR
     * Vantagem: Tamanho reduzido
     * Desvantagem: Não testado ainda, não sabemos a confiabilidade do receptor IR
-    
+
   - Usar fibra óptica no lugar do tupo
     * Falta conhecimento sobre fibra óptica, pouca chance de dar certo
 
 
 ## Imagens de outros projetos e modelo da mão
+
+![example1](https://cdn.instructables.com/F6W/OIIY/HLIDBVD7/F6WOIIYHLIDBVD7.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
+![example2](https://cdn.instructables.com/F29/0M99/HLIDBVBY/F290M99HLIDBVBY.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
+![example3](https://cdn.instructables.com/F94/N3UR/HLIDBVBZ/F94N3URHLIDBVBZ.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
+![example4](https://hackaday.com/wp-content/uploads/2011/10/optical-flex-sensors.jpg)
 
 <!-- ![otario](http://bpic.588ku.com/element_pic/18/03/06/db64b5a3fc94ce382e63c44e3952656d.jpg) -->
