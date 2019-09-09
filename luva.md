@@ -21,9 +21,6 @@
 
 ### Imagens de outros projetos e modelo da mão
 
-![example1](https://cdn.instructables.com/F6W/OIIY/HLIDBVD7/F6WOIIYHLIDBVD7.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
-![example2](https://cdn.instructables.com/F29/0M99/HLIDBVBY/F290M99HLIDBVBY.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
-![example3](https://cdn.instructables.com/F94/N3UR/HLIDBVBZ/F94N3URHLIDBVBZ.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
 ![example4](https://hackaday.com/wp-content/uploads/2011/10/optical-flex-sensors.jpg)
 
 <!-- ![otario](http://bpic.588ku.com/element_pic/18/03/06/db64b5a3fc94ce382e63c44e3952656d.jpg) -->
