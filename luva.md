@@ -1,6 +1,6 @@
 <!-- # [Mirror Hand](index.md) -->
 
-## Construção da luva
+### Construção da luva
 
  <p align="justify"> A luva será construída utilizando uma luva de EPI e o que chamamos de sensor de flexão óptica, que consiste em um tubo preto com um emissor de luz em uma extremidade e um sensor de luz em outra, ao ocorrer a dobra do tubo, menos luz do emissor alcança o sensor, o que causa um sinal que pode ser interpretado pelo microcontrolador. Além disso, será utilizado um giroscópio para leitura da rotação da mão.</p>
 
@@ -19,7 +19,7 @@
     * Falta conhecimento sobre fibra óptica, pouca chance de dar certo
 
 
-## Imagens de outros projetos e modelo da mão
+### Imagens de outros projetos e modelo da mão
 
 ![example1](https://cdn.instructables.com/F6W/OIIY/HLIDBVD7/F6WOIIYHLIDBVD7.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
 ![example2](https://cdn.instructables.com/F29/0M99/HLIDBVBY/F290M99HLIDBVBY.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
