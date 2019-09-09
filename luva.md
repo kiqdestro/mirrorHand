@@ -1,4 +1,4 @@
-# [Mirror Hand](index.md)
+<!-- # [Mirror Hand](index.md) -->
 
 ## Construção da luva
 
