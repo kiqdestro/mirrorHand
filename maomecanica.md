@@ -2,14 +2,14 @@
 
 ### Construção da mão mecânica
 
-<p align="justify"> A mão mecânica será construída com o uso do projeto InMoov, que consiste em um projeto open source de um robô construído
-com impressora 3D, as articulações serão movidas com servo motores armazenados em uma caixa separada e linhas presas a cada falange da
-mão robótica.</p>
+<p align="justify"> A construção da mão robótica será feita com impressora 3D, utilizando um modelo previsto para ser definido até a entrega 1 do projeto</p>
+
+<p align="justify"> O sistema de movimento será feito através de servo motores, linhas e polias. Cada dedo será controlado por 2 servo motores, um para flexionar as articulações interfalângicas com uma linha presa na parte posterior da falange distal e molas nas faces anteriores das articulações interfalângicas responsáveis pela extensão. O segundo servo motor irá realizar a extensão da articulação metacarpofalângica com uma mola responsável por sua flexão.</p>
 
 ## Alternativas caso o preço para impressão 3D seja muito caro e/ou complexo
 
-  - Construir uma mão mais simplificada com impressora 3D sem a necessidade dos mecanismos da inMoov
-  - Simplificar a mão construindo as falanges com pedações maciços de algum material como madeira ou resina
+  - Construir uma mão mais simplificada com impressora 3D
+  - Simplificar a mão construindo as falanges com pedações maciços de algum material como madeira ou resina sem usar impressora 3D
 
 ## Imagens
 
