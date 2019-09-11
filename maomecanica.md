@@ -12,15 +12,11 @@
   - Simplificar a mão construindo as falanges com pedações maciços de algum material como madeira ou resina sem usar impressora 3D
 
 ## Imagens
-
+![maorobotica](maorobotica.JPG)
+<br>
+<small>Figura 1 - Mão Robótica</small>
 ![example1](https://cdn.instructables.com/F6W/OIIY/HLIDBVD7/F6WOIIYHLIDBVD7.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
-Figura 1 - Mão Robô InMoov
-<br>
-![example2](https://cdn.instructables.com/F29/0M99/HLIDBVBY/F290M99HLIDBVBY.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
-Figura 2 - Mão Robô InMoov
-<br>
-![example3](https://cdn.instructables.com/F94/N3UR/HLIDBVBZ/F94N3URHLIDBVBZ.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
-Figura 3 - Mão Robô InMoov
+<small>Figura 2 - Mão Robô InMoov</small>
 <br>
 ![example4](https://cdn.instructables.com/FZ8/5GYJ/J70QLT4K/FZ85GYJJ70QLT4K.LARGE.jpg?auto=webp&width=1024&height=1024&fit=bounds)
-Figura 4 - Exemplo de mão robô simplificada
+<small>Figura 3 - Exemplo de mão robô simplificada</small>
