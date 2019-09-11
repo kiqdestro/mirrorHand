@@ -70,7 +70,7 @@
 
 ### Cronograma
 
- - [Planilha](https://docs.google.com/spreadsheets/d/1sdC0rdNofJFcj3CUji-1BI3xQIKClVm6QFSoB1_UFPU/edit?usp=sharing)
+ - [Planilha](https://docs.google.com/spreadsheets/d/1rPYKbOurIVPeYO_swWk3HFBk6oQO6jvVg92YagprTJc/edit?usp=sharing)
 
 ### Imagens de exemplo p/ apresentação
 
