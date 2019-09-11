@@ -21,7 +21,7 @@
 
 ### Imagens de outros projetos e modelo da luva
 
-![luva](luva.jpg)
+![luva](luva.JPG)
 
 ![example4](https://hackaday.com/wp-content/uploads/2011/10/optical-flex-sensors.jpg)
 
