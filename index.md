@@ -7,6 +7,13 @@
  - Caíque Destro (1658930) - caiquedestro@gmail.com
 
  - João Carlos Cardoso dos Santos (1371916) - jc.cardoso4@gmail.com
+ 
+### Apresentação:
+<p class="view"><a href="https://docs.google.com/spreadsheets/d/1rPYKbOurIVPeYO_swWk3HFBk6oQO6jvVg92YagprTJc/edit?usp=sharing"> Cronograma </a></p>
+
+### Cronograma:
+
+ - [Cronograma](https://docs.google.com/spreadsheets/d/1rPYKbOurIVPeYO_swWk3HFBk6oQO6jvVg92YagprTJc/edit?usp=sharing)
 
 ### Problema:
 
@@ -79,14 +86,6 @@
 - Entrega 2: Mão robótica
 
 - Entrega 3: Protótipo/Comunicação entre luva e mão robótica
-
-### Cronograma
-
- - [Planilha](https://docs.google.com/spreadsheets/d/1rPYKbOurIVPeYO_swWk3HFBk6oQO6jvVg92YagprTJc/edit?usp=sharing)
-
-### Imagens de exemplo p/ apresentação
-
- - [Imagens](https://docs.google.com/document/d/1lZfCHz8_iqgg3oapjwGZmA1cvhD7PHrdcaoKG9PNB3E/edit?usp=sharing)
 
 ### O Projeto
 
