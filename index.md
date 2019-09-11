@@ -39,6 +39,10 @@
    * Flexionar as articulações metacarpofalângicas lateralmente.
    * Flexionar as articulações interfalângicas distais e interfalângicas de forma independente.
    * Flexionar o pulso lateralmente
+   
+### Diagrama de Blocos:
+
+![diagramaBlocos](DiagramaMirrorHand.svg)
 
 ### Integração:
 
