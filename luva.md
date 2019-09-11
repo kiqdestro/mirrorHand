@@ -19,7 +19,9 @@
     * Falta conhecimento sobre fibra óptica, pouca chance de dar certo
 
 
-### Imagens de outros projetos e modelo da mão
+### Imagens de outros projetos e modelo da luva
+
+![luva](luva.jpg)
 
 ![example4](https://hackaday.com/wp-content/uploads/2011/10/optical-flex-sensors.jpg)
 
