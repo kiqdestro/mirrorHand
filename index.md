@@ -67,6 +67,14 @@
 
 - Problema: dificuldade na construção das articulações da mão
   * Solução: Simplificar o projeto e/ou escolher um novo modelo de construção da mão (já definidos no pré-projeto)
+  
+  ### Entregas:
+
+- Entrega 1: Luva de dados
+
+- Entrega 2: Mão robótica
+
+- Entrega 3: Protótipo/Comunicação entre luva e mão robótica
 
 ### Cronograma
 
