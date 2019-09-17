@@ -82,11 +82,20 @@
   
 ### Entregas:
 
-- Entrega 1: Luva de dados
+- <b>Entrega 1: Luva de dados:</b>
+  * Luva completamente montada e com os sensores de flexão.
+  * Captura manual das saídas dos sensores por multímetro.
 
-- Entrega 2: Mão robótica
+- <b>Entrega 2: Mão robótica:</b>
+  * Parte mecânica completamente montada.
+  * Servo motores funcionais e corretamente posicionados.
+  * Controle manual da mão robótica através da fonte de tensão CC.
+  <!-- o terceiro item citava potenciômetros, mas acho que são PWM (discutir) -->
 
-- Entrega 3: Protótipo/Comunicação entre luva e mão robótica
+- <b>Entrega 3: Protótipo/Comunicação entre luva e mão robótica:</b>
+  * Interfaceamento entre a luva de dados e a mão robótica.
+  * Controle funcional da mão robótica através da luva de dados.
+  * Protótipo completamente terminado.
 
 ### O Projeto
 
