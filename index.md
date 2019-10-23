@@ -87,12 +87,12 @@
   * Captura manual das saídas dos sensores por multímetro.
 
 - <b>Entrega 2: Mão robótica:</b>
-  * Parte mecânica completamente montada.
-  * Servo motores funcionais e corretamente posicionados.
-  * Controle manual da mão robótica através da fonte de tensão CC.
+  * Interfaceamento entre a luva e o computador
   <!-- o terceiro item citava potenciômetros, mas acho que são PWM (discutir) -->
 
 - <b>Entrega 3: Protótipo/Comunicação entre luva e mão robótica:</b>
+  * Parte mecânica completamente montada.
+  * Servo motores funcionais e corretamente montados.
   * Interfaceamento entre a luva de dados e a mão robótica.
   * Controle funcional da mão robótica através da luva de dados.
   * Protótipo completamente terminado.
