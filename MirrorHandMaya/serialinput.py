@@ -4,7 +4,7 @@
 import serial
 import numpy as np
 
-ARDUINO = "COM5"
+ARDUINO = "COM3"
 
 #Read multiple inputs from serial port
 
