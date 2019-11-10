@@ -6,6 +6,8 @@ import numpy as np
 
 ARDUINO = "COM3"
 
+Sensor = (0, 0)
+
 #Read multiple inputs from serial port
 
 
@@ -14,30 +16,38 @@ def InitSerial():
     return SerialInput
 
 def ReadSerial(SerialInput):
-    #PreviousValue = None
-    # Read the serial value
-    #SerialInput.flushInput()
     try:
-        return SerialInput.readline().strip()
+        SensorNumber = 0
+        SensorValue = ""
+        SerialInput.reset_input_buffer()
+        SerialData = SerialInput.read().decode("utf-8")
+        while (SerialData != '>'):
+            SerialData = SerialInput.read().decode()
+        SensorNumber = int(SerialInput.read())
+        if(SerialInput.read().decode("utf-8") == '-'):
+            while (SerialData != '<'):
+                SerialData = SerialInput.read().decode("utf-8")
+                if(SerialData != '<'):
+                    SensorValue = SensorValue + SerialData
+        Sensor = (SensorNumber, int(SensorValue))
+        return Sensor
     except ValueError:
         pass
-    # Catch any bad serial data:
-    #try:
-        #if SerialValue != PreviousValue:
-            # Print the value if it differs from the prevVal:
-        #    print(SerialValue)
-            #maya.send(serialValue)
-        #    PreviousValue = SerialValue
-    #except ValueError:
-        #pass
 
-SensorValues = [0] * 10
+"""def ReadSensors(SerialLine):
+    value = 0
+    Sensors = [0] * 10"""
 
-def ReadSensors(SerialLine):
-    try:                            #Tratamento de excecao e de erro caso a serial receba uma string errada
+"""    try:
+        if (SerialLine =)
+    except ValueError:
+        return Sensors"""
+
+
+"""    try:                            #Tratamento de excecao e de erro caso a serial receba uma string errada
         index = int(SerialLine[3:4]) #safe cast para int
     except ValueError:
-        return SensorValues         #Retorna valores antigos
+        return Sensors         #Retorna valores antigos
     try:
         if (len(SerialLine) == 8):
             value = int(float(SerialLine[5:8])) 
@@ -47,7 +57,9 @@ def ReadSensors(SerialLine):
         if (len(SerialLine) == 7):
             value = int(float(SerialLine[5:7])) #Se nao der certo para 3 algarismos tenta para 2, senao retorna o valor antigo
     except ValueError:
-        return SensorValues
-    print (SerialLine)
-    SensorValues[index] = value
-    return SensorValues
+        return Sensors
+    try:
+        Sensors[index] = value
+    except ValueError:
+        return Sensors
+    return Sensors"""

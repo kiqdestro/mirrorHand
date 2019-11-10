@@ -1,18 +1,24 @@
 # Modulo de comunicacao com o Maya
 # Joao Carlos Cardoso - 2019
 
+#Rodar o seguinte código no maya
+#import maya.cmds as cmds
+#cmds.commandPort(n="localhost:7777")
+
 import socket
 
 HOST = '127.0.0.1'
 PORT = 7777
 ADDRESS = (HOST,PORT)
 
+connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+connection.connect(ADDRESS)
+
+def OpenConnection():
+    connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #open socket
+    connection.connect(ADDRESS)   #connect to maya
+    return connection
+
 def SendCommand(Command):
-    maya = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #open socket
-    maya.connect(ADDRESS)   #connect to maya
 
-    maya.send(Command.encode())    #send command to maya
-    data = maya.recv(1024)
-    maya.close()
-
-    print ('The Result is %s' %data)
+    connection.send(Command.encode())    #send command to maya

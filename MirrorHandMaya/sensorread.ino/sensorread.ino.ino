@@ -22,9 +22,9 @@ void loop() {
   int sensor[10];
   sensor[0] = analogRead(A0);
   sensor[1] = analogRead(A1);
-  //sensor[2] = analogRead(A2);
-  //sensor[3] = analogRead(A3);
-  //sensor[4] = analogRead(A4);
+  sensor[2] = analogRead(A2);
+  sensor[3] = analogRead(A3);
+  sensor[4] = analogRead(A4);
   //sensor[5] = analogRead(A5);
   //sensor[6] = analogRead(A6);
   //sensor[7] = analogRead(A7);
