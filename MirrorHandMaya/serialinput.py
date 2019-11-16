@@ -4,7 +4,7 @@
 import serial
 import numpy as np
 
-ARDUINO = "COM3"
+ARDUINO = "COM5"
 
 Sensor = (0, 0)
 
@@ -12,7 +12,8 @@ Sensor = (0, 0)
 
 
 def InitSerial():
-    SerialInput = serial.Serial(ARDUINO, 115200)
+    SerialInput = serial.Serial(ARDUINO, 9600)
+    # SerialInput = serial.Serial(ARDUINO, 115200)
     return SerialInput
 
 def ReadSerial(SerialInput):
