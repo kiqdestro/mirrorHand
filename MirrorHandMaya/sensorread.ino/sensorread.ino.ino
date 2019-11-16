@@ -25,17 +25,16 @@ void loop() {
   sensor[2] = analogRead(A2);
   sensor[3] = analogRead(A3);
   sensor[4] = analogRead(A4);
-  //sensor[5] = analogRead(A5);
-  //sensor[6] = analogRead(A6);
-  //sensor[7] = analogRead(A7);
-  //sensor[8] = analogRead(A8);
-  //sensor[9] = analogRead(A9);
+  sensor[5] = analogRead(A5);
+  sensor[6] = analogRead(A6);
+  sensor[7] = analogRead(A7);
+  sensor[8] = analogRead(A8);
+  sensor[9] = analogRead(A9);
 
   //Print the values to serial
-  for(int i = 0; i < 10; i++)
+  for(int i = 0; i < 9; i++)
   {
-    Serial.print(">s="); Serial.print(i); Serial.print("\t");Serial.print(sensor[i]); Serial.print("\t");
-    Serial.println("");
-   delayMicroseconds(86);
+    Serial.print(">"); Serial.print(i); Serial.print("-");Serial.print(sensor[i]); Serial.print("<");
+    //delayMicroseconds(86);
   }
 }
