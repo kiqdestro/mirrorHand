@@ -2,7 +2,7 @@
 # Necessário - Arduino, Autodesk Maya
 # Joao Carlos Cardoso - 2019
 
-# import maya as Maya
+import maya as Maya
 import time
 import serialinput as SerialInput
 import numpy as np 
@@ -52,7 +52,7 @@ def main():
         print(Value[1], Min[Value[0]], Max[Value[0]], Min[Value[0]], sep=' - ')                               
         CommandString = "setAttr(\"joint" + str(Value[0]+1) + ".rotateZ\"," + str(NormalizedValue*90) + ");"     #Build MEL CommandString
         print(CommandString)
-        # Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+        Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
         #time.sleep(.1)                                                     #Delay
 
 if __name__=="__main__":

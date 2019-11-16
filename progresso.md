@@ -2,6 +2,8 @@
 
 ## Luva de dados
 
+
+
 ## Mão mecânica
 
 ## Interfaceamento

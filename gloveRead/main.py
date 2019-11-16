@@ -41,7 +41,9 @@ def main():
         if (normalized_value < 0):
             normalized_value = 0
         print(value[1], minimum[value[0]], maximum[value[0]], minimum[value[0]], sep=' - ')                               
-        command_string = "setAttr(\"joint" + str(value[0]+1) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL command_string
+        command_string = "setAttr(\"joint" + str(value[0]+1) + ".rotateZ\"," + str(normalized_value*180) + ");"     #Build MEL command_string
         print(command_string)
-        # Maya.SendCommand(command_string)                                 #Send MEL Commando to MAYA
         # time.sleep(.1)                                                     #Delay
+
+if __name__ == "__main__":
+    main()

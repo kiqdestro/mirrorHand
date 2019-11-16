@@ -12,7 +12,7 @@ Sensor = (0, 0)
 
 
 def InitSerial():
-    SerialInput = serial.Serial(ARDUINO, 115200)
+    SerialInput = serial.Serial(ARDUINO, 9600)
     return SerialInput
 
 def ReadSerial(SerialInput):
