@@ -4,7 +4,8 @@
 import serial
 import numpy as np
 
-ARDUINO = "COM5"
+# ARDUINO = "COM5" # PC
+ARDUINO = "/dev/ttyAMA0" # RPi
 
 Sensor = (0, 0)
 

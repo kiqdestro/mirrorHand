@@ -1,4 +1,5 @@
 import time
+import RPi.GPIO as GPIO
 import serialinput as si
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,6 +11,8 @@ minimum = [0]*10
 values = [0]*10
 value = 0
 ctrl = ServoControl()
+
+GPIO.setmode(GPIO.BOARD) # RPi
 
 def main():
 
