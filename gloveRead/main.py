@@ -36,7 +36,7 @@ values = [0]*10
 value = 0
 ctrl = ServoControl()
 
-GPIO.setmode(GPIO.BOARD) # RPi
+# GPIO.setmode(GPIO.BOARD) # RPi
 
 def main():
 
