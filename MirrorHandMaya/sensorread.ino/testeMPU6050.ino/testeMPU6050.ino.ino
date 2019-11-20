@@ -199,9 +199,9 @@ void setup() {
     devStatus = mpu.dmpInitialize();
 
     // supply your own gyro offsets here, scaled for min sensitivity
-    mpu.setXGyroOffset(220);
-    mpu.setYGyroOffset(76);
-    mpu.setZGyroOffset(-85);
+    mpu.setXGyroOffset(100);
+    mpu.setYGyroOffset(90);
+    mpu.setZGyroOffset(0);
     mpu.setZAccelOffset(1788); // 1688 factory default for my test chip
 
     // make sure it worked (returns 0 if so)
@@ -386,20 +386,34 @@ void loop() {
                 //delayMicroseconds(86);
             }
 
-            // display for mirrorhandmaya
+//            // display for mirrorhandmaya
+//            mpu.dmpGetQuaternion(&q, fifoBuffer);
+//            mpu.dmpGetGravity(&gravity, &q);
+//            mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
+//            Serial.print(">"); Serial.print("10"); Serial.print("$");
+//            Serial.print(ypr[0] * 180/M_PI);
+//            Serial.print("<");
+//            Serial.print(">"); Serial.print("11"); Serial.print("$");
+//            Serial.print(ypr[1] * 180/M_PI);
+//            Serial.print("<");
+//            Serial.print(">"); Serial.print("12"); Serial.print("$");
+//            Serial.print(ypr[2] * 180/M_PI);
+//            Serial.print("<");
+//            Serial.print("\n");
+
             mpu.dmpGetQuaternion(&q, fifoBuffer);
-            mpu.dmpGetGravity(&gravity, &q);
-            mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
+            mpu.dmpGetEuler(euler, &q);
             Serial.print(">"); Serial.print("10"); Serial.print("$");
-            Serial.print(ypr[0] * 180/M_PI);
+            Serial.print(euler[0] * 180/M_PI);
             Serial.print("<");
             Serial.print(">"); Serial.print("11"); Serial.print("$");
-            Serial.print(ypr[1] * 180/M_PI);
+            Serial.print(euler[1] * 180/M_PI);
             Serial.print("<");
             Serial.print(">"); Serial.print("12"); Serial.print("$");
-            Serial.print(ypr[2] * 180/M_PI);
+            Serial.print(euler[2] * 180/M_PI);
             Serial.print("<");
             Serial.print("\n");
+    
         #endif
         
         // blink LED to indicate activity

@@ -17,7 +17,7 @@ def InitSerial():
 # =======
     #SerialInput = serial.Serial(ARDUINO, 9600)
     SerialInput = serial.Serial(ARDUINO, 115200, timeout=10)
->>>>>>> IMU
+#>>>>>>> IMU
     return SerialInput
 
 def ReadSerial(SerialInput):
@@ -49,7 +49,10 @@ def ReadSerial(SerialInput):
         #print(String[i])
         return Sensor
     except ValueError:
-        pass        
+        pass       
+
+    
+     
         """ SerialData = SerialInput.read(1).decode("utf-8")
         print (SerialData)
         while (SerialData != '>'):
