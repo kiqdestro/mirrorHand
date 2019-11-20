@@ -4,36 +4,65 @@
 import serial
 import numpy as np
 
-ARDUINO = "COM5"
+ARDUINO = "COM3"
 
-Sensor = (0, 0)
+Sensor = [0] * 13
 
 #Read multiple inputs from serial port
 
 
 def InitSerial():
-    SerialInput = serial.Serial(ARDUINO, 9600)
-    # SerialInput = serial.Serial(ARDUINO, 115200)
+    #SerialInput = serial.Serial(ARDUINO, 9600)
+    SerialInput = serial.Serial(ARDUINO, 115200, timeout=10)
     return SerialInput
 
 def ReadSerial(SerialInput):
     try:
         SensorNumber = 0
         SensorValue = ""
-        SerialInput.reset_input_buffer()
-        SerialData = SerialInput.read().decode("utf-8")
+        #SerialInput.reset_input_buffer()
+        #SerialInput.write(bytes(1))
+        String = SerialInput.readline().decode()
+        #print(String)
+        i = 0
+        while (String[i] != "\n"):
+            SensorValue = ""
+            CurrentSensor = ""
+            if(String[i] == ">"):
+                i = i+1
+                while(String[i] != "$"):
+                    CurrentSensor = CurrentSensor + String[i]
+                    i = i+1
+                #print(CurrentSensor)
+            if(String[i] == "$"):
+                i = i+1
+                while(String[i] != "<"):
+                    SensorValue = SensorValue + String[i]
+                    i = i+1
+            i = i+1
+            Sensor[int(CurrentSensor)] = int(float(SensorValue))
+            #print (CurrentSensor, SensorValue, sep = " - ")
+        #print(String[i])
+        return Sensor
+    except ValueError:
+        pass        
+        """ SerialData = SerialInput.read(1).decode("utf-8")
+        print (SerialData)
         while (SerialData != '>'):
-            SerialData = SerialInput.read().decode()
-        SensorNumber = int(SerialInput.read())
-        if(SerialInput.read().decode("utf-8") == '-'):
+            SerialData = SerialInput.read(1).decode()
+            print(SerialData)
+        SensorNumber = int(SerialInput.read(1))
+        print(SerialData)
+        if(SerialInput.read(1).decode("utf-8") == '-'):
             while (SerialData != '<'):
-                SerialData = SerialInput.read().decode("utf-8")
+                SerialData = SerialInput.read(1).decode("utf-8")
+                print(SerialData)
                 if(SerialData != '<'):
                     SensorValue = SensorValue + SerialData
         Sensor = (SensorNumber, int(SensorValue))
-        return Sensor
-    except ValueError:
-        pass
+        print (Sensor)
+        return Sensor """
+
 
 """def ReadSensors(SerialLine):
     value = 0
