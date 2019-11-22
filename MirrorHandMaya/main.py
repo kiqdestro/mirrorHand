@@ -73,11 +73,11 @@ def main():
             #Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
 
         CommandString = "setAttr(\"b.rotateX\"," + str(Values[10]*-1) + ");"     #Build MEL CommandString
-        Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+        #Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
         CommandString = "setAttr(\"b.rotateY\"," + str(Values[11]*-1) + ");"     #Build MEL CommandString
-        Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+        #Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
         CommandString = "setAttr(\"b.rotateZ\"," + str(Values[12]) + ");"     #Build MEL CommandString
-        Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+        #Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
                 
 
         """ if Value is not None:
