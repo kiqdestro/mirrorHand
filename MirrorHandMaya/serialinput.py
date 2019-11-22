@@ -4,7 +4,7 @@
 import serial
 import numpy as np
 
-ARDUINO = "COM3"
+ARDUINO = "/dev/ttyAMA0"
 
 Sensor = [0] * 13
 
