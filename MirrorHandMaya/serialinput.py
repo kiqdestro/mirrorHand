@@ -3,9 +3,11 @@
 
 import serial
 import numpy as np
+import time
 
 ARDUINO = "COM3"
-
+#PI = "COM6"
+#SerialOutput = serial.Serial(PI, baudrate=115200, timeout = 1, bytesize=8, parity='N', stopbits=1)
 Sensor = [0] * 13
 
 #Read multiple inputs from serial port
@@ -16,22 +18,36 @@ def InitSerial():
 #     SerialInput = serial.Serial(ARDUINO, 115200)
 # =======
     #SerialInput = serial.Serial(ARDUINO, 9600)
-    SerialInput = serial.Serial(ARDUINO, 115200, timeout=10)
+    SerialInput = serial.Serial(ARDUINO, 115200, timeout = 1)
 #>>>>>>> IMU
     return SerialInput
 
+def Read(SerialInput):
+    char = SerialInput.read()
+    #print(char)
+    #written = SerialOutput.write(char)
+    return char
+
 def ReadSerial(SerialInput):
     try:
-        SensorNumber = 0
-        SensorValue = ""
-        #SerialInput.reset_input_buffer()
-        #SerialInput.write(bytes(1))
-        String = SerialInput.readline().decode()
-        #print(String)
+        char = Read(SerialInput)
+        String = ''
+        while (char != '\t'.encode('utf-8')):
+            char = Read(SerialInput)
+        String = String + char.decode()
+        while(char != '\n'.encode('utf-8')):
+            String = String + char.decode()
+            char = Read(SerialInput)
+        String = String + char.decode()
+        print(String)
         i = 0
         while (String[i] != "\n"):
+            #print(String[i])
             SensorValue = ""
             CurrentSensor = ""
+            while(String[i] != ">"):
+                #print(String[i])
+                i = i+1
             if(String[i] == ">"):
                 i = i+1
                 while(String[i] != "$"):
@@ -46,7 +62,7 @@ def ReadSerial(SerialInput):
             i = i+1
             Sensor[int(CurrentSensor)] = int(float(SensorValue))
             #print (CurrentSensor, SensorValue, sep = " - ")
-        #print(String[i])
+        #print (Sensor)
         return Sensor
     except ValueError:
         pass       
