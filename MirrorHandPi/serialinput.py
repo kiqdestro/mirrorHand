@@ -5,11 +5,10 @@ import serial
 import numpy as np
 import time
 
-<<<<<<< HEAD
-ARDUINO = "COM3"
+
+ARDUINO = "/dev/rfcomm0"
 #PI = "COM6"
 #SerialOutput = serial.Serial(PI, baudrate=115200, timeout = 1, bytesize=8, parity='N', stopbits=1)
-=======
 #ARDUINO = "/dev/ttyAMA0"
 #
 #>>>>>>> 759ba770ad7c9119ac8009bfc86c13e9fdee6b8c
@@ -35,6 +34,7 @@ def Read(SerialInput):
 
 def ReadSerial(SerialInput):
     try:
+        SerialInput.flushInput()
         char = Read(SerialInput)
         String = ''
         while (char != '\t'.encode('utf-8')):
@@ -44,7 +44,7 @@ def ReadSerial(SerialInput):
             String = String + char.decode()
             char = Read(SerialInput)
         String = String + char.decode()
-        print(String)
+       #print(String)
         i = 0
         while (String[i] != "\n"):
             #print(String[i])
@@ -69,7 +69,7 @@ def ReadSerial(SerialInput):
             #print (CurrentSensor, SensorValue, sep = " - ")
         #print (Sensor)
         return Sensor
-    except ValueError:
+    except:
         pass       
 
     

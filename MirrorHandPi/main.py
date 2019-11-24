@@ -20,22 +20,24 @@ def main():
         
     #Values = SerialInput.ReadSensors(SerialData)    #Get sensor list from serial
     #for i in range(len(Values)):
-    input("Estique os dedos e pressione espaco para calibrar")
+    input("Estique os dedos e pressione enter para calibrar")
     ElapsedTime = 0
     StartTime = time.time()
     Values = SerialInput.ReadSerial(Serial)
     while(ElapsedTime < 1):
         Values = SerialInput.ReadSerial(Serial)
         #print(ElapsedTime)
-        Max = Values
+        Max = Values[:]
+        print(Max)
         ElapsedTime = time.time() - StartTime
         
-    input("Dobre os dedos e pressione espaco para calibrar")
+    input("Dobre os dedos e pressione enter para calibrar")
     ElapsedTime = 0
     StartTime = time.time()
     while(ElapsedTime < 1):
         Values = SerialInput.ReadSerial(Serial)
-        Min = Values
+        Min = Values[:]
+        print(Min)
         ElapsedTime = time.time() - StartTime
 
     print(Max)
@@ -51,7 +53,7 @@ def main():
         print (Values)
         for i in range (8):
             try:
-                print(Values[i], Min[i], Max[i], Min[i], sep=' - ')
+               	print(Values[i], Min[i], Max[i], Min[i], sep=' - ')
                 if(Max[i] - Min[i] != 0):
                     NormalizedValue = (1-((Values[i]- Min[i])/(Max[i]-Min[i]))) #Convert Input to a rotation value between 0 and 90 deg
                     if (NormalizedValue > 1):
@@ -61,7 +63,9 @@ def main():
                 else: NormalizedValue = 0                
                 CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(NormalizedValue*90) + ");"     #Build MEL CommandString
                 Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+                #print(CommandString)
             except TypeError:
+                print("TypeError joints")
                 pass
         try:
             CommandString = "setAttr(\"b.rotateX\"," + str(Values[10]*-1) + ");"     #Build MEL CommandString
@@ -71,6 +75,7 @@ def main():
             CommandString = "setAttr(\"b.rotateZ\"," + str(Values[12]) + ");"     #Build MEL CommandString
             Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
         except TypeError:
+            print("TypeError IMU")
             pass
 #>>>>>>> IMU
 
