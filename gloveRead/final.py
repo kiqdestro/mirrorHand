@@ -7,10 +7,6 @@ import time
 
 bluetoothSerial = serial.Serial( "/dev/rfcomm0", baudrate=9600 )
  
-<<<<<<< HEAD
-bluetoothSerial.write('5'.toBytes())
-print(bluetoothSerial.readline())
-=======
 count = None
 while count == None:
     try:
@@ -21,4 +17,3 @@ while count == None:
  
 bluetoothSerial.write( str(count) )
 print(bluetoothSerial.readline())
->>>>>>> 737fb1c8a9022f07506d3bc8a541ee71600d18ff
