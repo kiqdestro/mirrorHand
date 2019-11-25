@@ -92,6 +92,7 @@ def main():
     # print(minimum)
 
     # input("Aperte enter para iniciar")
+    print("inicio")
 
     while(True):
 
@@ -106,6 +107,8 @@ def main():
                 normalized_value = 0
 
             ctrl.setPos(value[0], normalized_value)
+
+            print("[{}, {}]".format(value[0], normalized_value*180))
             
         except:
             continue
