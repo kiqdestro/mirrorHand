@@ -96,7 +96,7 @@ def main():
 
     while(True):
 
-        value = bluetoothSerial.readline()
+        value = (bluetoothSerial.readline()).decode("utf-8")[:-2].split(",")
         # value = si.ReadSerial(serial)                                   #Loop
         #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values
         try:
