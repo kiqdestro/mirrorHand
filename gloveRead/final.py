@@ -1,9 +1,12 @@
 #! /usr/bin/python
 
 from adafruit_servokit import ServoKit
+import serialinput as si
 import itsAlive
 import serial
 import time
+
+kit = ServoKit(channels = 16)
 
 class ServoControl():
 	def __init__(self):
@@ -39,24 +42,34 @@ ctrl = ServoControl()
 def main():
     itsAlive.firstMovement()
 
-    print("Estique os dedos e pressione espaco para calibrar")
+    print("Estique os dedos e espere para calibrar")
 
-    time.sleep(5000)
+    time.sleep(5)
     # input("Estique os dedos e pressione espaco para calibrar")
 
     start_time = time.time()
     elapsed_time = 0
 
-    while(elapsed_time < 1):
-        sensor_max = serial.readline()
-        maximum[sensor_max[0]] = sensor_max[1]
+    while(elapsed_time < 3):
+    #while(True):
+        sensor_max = (bluetoothSerial.readline()).decode("utf-8")[:-2].split(",")
+        print(sensor_max)
+        #input("Enter to continue")
+
+        try:
+            print("sensor_max[0]: " + sensor_max[0])
+            print("sensor_max[1]: " + sensor_max[1])
+            maximum[int(sensor_max[0])] = int(sensor_max[1])
+        except:
+            continue
+
         elapsed_time = time.time() - start_time
 
     itsAlive.closeHand()
 
-    print("Dobre os dedos e pressione espaco para calibrar")
+    print("Dobre os dedos e espere para calibrar")
 
-    time.sleep(5000)
+    time.sleep(5)
     
     # input("Dobre os dedos e pressione espaco para calibrar")
     start_time = time.time()
@@ -84,6 +97,9 @@ def main():
             normalized_value = 0
 
         ctrl.setPos(value[0], normalized_value)
+
+if __name__ == "__main__":
+    main()
  
 # count = 5
  

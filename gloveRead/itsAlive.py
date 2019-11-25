@@ -5,7 +5,7 @@ import serial
 import final
 import time
 
-ctrl = final.servoControl()
+ctrl = final.ServoControl()
 
 def firstMovement():
     for i in range(11):
@@ -13,7 +13,7 @@ def firstMovement():
     
     for i in range(11):
         ctrl.setPos(i, 0)
-        time.sleep(500)
+        time.sleep(0.5)
     
     for i in range(11):
         ctrl.setPos(i, 1)
