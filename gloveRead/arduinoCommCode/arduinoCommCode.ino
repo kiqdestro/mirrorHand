@@ -3,8 +3,8 @@ void setup() {
 }
 
 void loop() {
-  // Serial1.println("ae caraio");
-  // delay(2000);
+//   Serial1.println("ae caraio");
+//   delay(2000);
   int sensor[10];
   sensor[0] = analogRead(A0);
   sensor[1] = analogRead(A1);
@@ -20,8 +20,12 @@ void loop() {
   //Print the values to serial
   for(int i = 0; i < 9; i++)
   {
-    Serial1.print(">"); Serial1.print(i); Serial1.print("-"); Serial1.print(sensor[i]); Serial1.print("<");
+    Serial1.print(i); Serial1.print(","); Serial1.print(sensor[i]); Serial1.print("\n");
+//    Serial1.print(">"); Serial1.print(i); Serial1.print("-"); Serial1.print(sensor[i]); Serial1.print("<"); Serial1.print("\n");
   }
+
+
+  
 //   // listen for the data
 //   if ( Serial1.available() > 0 ) {
 //     // read a numbers from serial port
