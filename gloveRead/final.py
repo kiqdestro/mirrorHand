@@ -78,7 +78,7 @@ def main():
     while(elapsed_time < 2):
         sensor_min = (bluetoothSerial.readline()).decode("utf-8")[:-2].split(",")
         print(sensor_min)
-        
+
         try:
             print("sensor_min[0]: " + sensor_min[0])
             print("sensor_min[1]: " + sensor_min[1])
@@ -98,13 +98,17 @@ def main():
         value = bluetoothSerial.readline()
         # value = si.ReadSerial(serial)                                   #Loop
         #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values
-        normalized_value = (1-((value[1]- minimum[value[0]])/(maximum[value[0]]-minimum[value[0]]))) # Normalizing
-        if (normalized_value > 1):
-            normalized_value = 1
-        if (normalized_value < 0):
-            normalized_value = 0
+        try:
+            normalized_value = (1-((value[1]- minimum[value[0]])/(maximum[value[0]]-minimum[value[0]]))) # Normalizing
+            if (normalized_value > 1):
+                normalized_value = 1
+            if (normalized_value < 0):
+                normalized_value = 0
 
-        ctrl.setPos(value[0], normalized_value)
+            ctrl.setPos(value[0], normalized_value)
+            
+        except:
+            continue
 
 if __name__ == "__main__":
     main()
