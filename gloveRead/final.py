@@ -50,7 +50,7 @@ def main():
     start_time = time.time()
     elapsed_time = 0
 
-    while(elapsed_time < 3):
+    while(elapsed_time < 2):
     #while(True):
         sensor_max = (bluetoothSerial.readline()).decode("utf-8")[:-2].split(",")
         print(sensor_max)
@@ -75,9 +75,17 @@ def main():
     start_time = time.time()
     elapsed_time = 0
 
-    while(elapsed_time < 1):
-        sensor_min = bluetoothSerial.readline()
-        minimum[sensor_min[0]] = sensor_min[1]
+    while(elapsed_time < 2):
+        sensor_min = (bluetoothSerial.readline()).decode("utf-8")[:-2].split(",")
+        print(sensor_min)
+        
+        try:
+            print("sensor_min[0]: " + sensor_min[0])
+            print("sensor_min[1]: " + sensor_min[1])
+        except:
+            minimum[sensor_min[0]] = sensor_min[1]
+            continue
+
         elapsed_time = time.time() - start_time
 
     # print(maximum)
