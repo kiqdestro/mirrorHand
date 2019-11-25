@@ -101,7 +101,7 @@ def main():
         #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values  
         print(value)
         try:
-            normalized_value = (1-((int(value[1)]- minimum[int(value[0)]])/(maximum[int(value[0])]-minimum[int(value[0])]))) # Normalizing
+            normalized_value = (1-((int(value[1])- minimum[int(value[0])])/(maximum[int(value[0])]-minimum[int(value[0])]))) # Normalizing
             if (normalized_value > 1):
                 normalized_value = 1
             if (normalized_value < 0):
