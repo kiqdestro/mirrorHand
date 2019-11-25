@@ -98,19 +98,23 @@ def main():
 
         value = (bluetoothSerial.readline()).decode("utf-8")[:-2].split(",")
         # value = si.ReadSerial(serial)                                   #Loop
-        #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values
+        #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values  
+        print(value)
         try:
-            normalized_value = (1-((value[1]- minimum[value[0]])/(maximum[value[0]]-minimum[value[0]]))) # Normalizing
+            normalized_value = (1-((int(value[1)]- minimum[int(value[0)]])/(maximum[int(value[0])]-minimum[int(value[0])]))) # Normalizing
             if (normalized_value > 1):
                 normalized_value = 1
             if (normalized_value < 0):
                 normalized_value = 0
 
-            ctrl.setPos(value[0], normalized_value)
+            print("hehehe")
 
-            print("[{}, {}]".format(value[0], normalized_value*180))
+            print("[{}, {}]".format(value[0], float(normalized_value)*180))
+
+            ctrl.setPos(int(value[0)], float(normalized_value))
             
-        except:
+        except IndexRange:
+            print("erro")
             continue
 
 if __name__ == "__main__":
