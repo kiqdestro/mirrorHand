@@ -134,6 +134,9 @@ def main():
                         normalized_value = 0
                     old_normalized_value = normalized_value
 
+                    CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(NormalizedValue*90) + ");"     #Build MEL CommandString
+                    Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+
                     print("[{}, {}]".format(i, float(normalized_value)*180))
 
                     # ctrl.setPos(i, normalized_value)
@@ -149,6 +152,17 @@ def main():
                     continue
         except TypeError:
                 pass
+
+        try:
+            CommandString = "setAttr(\"b.rotateX\"," + str(Values[10]*-1) + ");"     #Build MEL CommandString
+            Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+            CommandString = "setAttr(\"b.rotateY\"," + str(Values[11]*-1) + ");"     #Build MEL CommandString
+            Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+            CommandString = "setAttr(\"b.rotateZ\"," + str(Values[12]) + ");"     #Build MEL CommandString
+            Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+        except TypeError:
+            print("TypeError IMU")
+            pass
         
 
 if __name__ == "__main__":
