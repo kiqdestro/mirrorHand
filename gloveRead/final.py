@@ -121,37 +121,35 @@ def main():
         #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values  
         print("value: " + str(value))
 
-        try:
-            for i in range(len(value)):
-                try:
+        for i in range(len(value)):
+            try:
 
-                    #os.system("clear")
+                #os.system("clear")
+                print(value[i], minimum[i], maximum[i], minimum[i], sep=' - ')
+                normalized_value = (1-((value[i]- minimum[i])/(maximum[i]-minimum[i]))) # Normalizing
+                if (normalized_value > 1):
+                    normalized_value = 1
+                if (normalized_value < 0):
+                    normalized_value = 0
+                old_normalized_value = normalized_value
 
-                    normalized_value = (1-((value[i]- minimum[i])/(maximum[i]-minimum[i]))) # Normalizing
-                    if (normalized_value > 1):
-                        normalized_value = 1
-                    if (normalized_value < 0):
-                        normalized_value = 0
-                    old_normalized_value = normalized_value
+                CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
+                maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
 
-                    CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(NormalizedValue*90) + ");"     #Build MEL CommandString
-                    Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+                print("[{}, {}]".format(i, float(normalized_value)*180))
 
-                    print("[{}, {}]".format(i, float(normalized_value)*180))
+                # ctrl.setPos(i, normalized_value)
 
-                    # ctrl.setPos(i, normalized_value)
+                CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
+                maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+            
+            except (IndexError, ValueError):
+                print("erro")
+                continue
+            except (ZeroDivisionError):
+                normalized_value = old_normalized_value
+                continue
 
-                    CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
-                    maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
-                
-                except (IndexError, ValueError):
-                    print("erro")
-                    continue
-                except (ZeroDivisionError):
-                    normalized_value = old_normalized_value
-                    continue
-        except TypeError:
-                pass
 
         try:
             CommandString = "setAttr(\"b.rotateX\"," + str(Values[10]*-1) + ");"     #Build MEL CommandString
