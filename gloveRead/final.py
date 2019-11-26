@@ -2,10 +2,11 @@
 
 from adafruit_servokit import ServoKit
 import serialinput as si
+import maya as maya
 import itsAlive
 import serial
 import time
-import maya as maya
+import os
 
 kit = ServoKit(channels = 16)
 
@@ -118,7 +119,10 @@ def main():
 
         for i in range(len(value)):
             try:
-                normalized_value = (1-((Values[i]- Min[i])/(Max[i]-Min[i]))) # Normalizing
+
+                os.system(clear)
+
+                normalized_value = (1-((value[i]- minimum[i])/(maximum[i]-minimum[i]))) # Normalizing
                 if (normalized_value > 1):
                     normalized_value = 1
                 if (normalized_value < 0):
@@ -126,12 +130,10 @@ def main():
 
                 print("[{}, {}]".format(i, float(normalized_value)*180))
 
-                ctrl.setPos(i, normalized_value)
+                # ctrl.setPos(i, normalized_value)
 
-                print()
-
-                CommandString = "setAttr(\"joint" + str(value[0]) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
-                maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+                # CommandString = "setAttr(\"joint" + str(value[0]) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
+                # maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
             
             except (IndexError, ValueError):
                 print("erro")
