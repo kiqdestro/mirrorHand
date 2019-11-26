@@ -257,15 +257,16 @@ void loop() {
     sensor[8] = analogRead(A8);
     sensor[9] = analogRead(A9);
 
+
     //Print the values to serial
-    Serial.print("\t");
+//    Serial.print("\t");
     for(int i = 0; i < 8; i++)
     {
         Serial1.print(i); Serial1.print(","); Serial1.print(sensor[i]); Serial1.print("\n");
         //delayMicroseconds(86);
     }
 
-    Serial1.print("\t");
+//    Serial1.print("\t");
     for(int i = 0; i < 8; i++)
     {
         Serial1.print(i); Serial1.print(","); Serial1.print(sensor[i]); Serial1.print("\n");
