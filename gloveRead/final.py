@@ -70,7 +70,7 @@ def main():
     while(elapsed_time < 2):
     #while(True):
         sensor_max = si.ReadSerial(bluetoothSerial)
-        print(sensor_max)
+        # print(sensor_max)
         #input("Enter to continue")
 
         try:
@@ -78,6 +78,7 @@ def main():
             # print("sensor_max[1]: " + sensor_max[1])
             maximum = sensor_max[:]
         except:
+            elapsed_time = time.time() - start_time
             continue
 
         elapsed_time = time.time() - start_time
