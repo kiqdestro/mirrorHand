@@ -27,15 +27,22 @@ def main():
     while(ElapsedTime < 1):
         Values = SerialInput.ReadSerial(Serial)
         #print(ElapsedTime)
-        Max = Values
+        try:
+            Max = Values[:]
+        except:
+            pass
         ElapsedTime = time.time() - StartTime
         
+
     input("Dobre os dedos e pressione espaco para calibrar")
     ElapsedTime = 0
     StartTime = time.time()
     while(ElapsedTime < 1):
         Values = SerialInput.ReadSerial(Serial)
-        Min = Values
+        try:
+            Min = Values[:]
+        except:
+            pass
         ElapsedTime = time.time() - StartTime
 
     print(Max)
@@ -62,6 +69,7 @@ def main():
                 CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(NormalizedValue*90) + ");"     #Build MEL CommandString
                 Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
             except TypeError:
+                print("Joints error")
                 pass
         try:
             CommandString = "setAttr(\"b.rotateX\"," + str(Values[10]*-1) + ");"     #Build MEL CommandString

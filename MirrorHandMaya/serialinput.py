@@ -5,15 +5,15 @@ import serial
 import numpy as np
 import time
 
-<<<<<<< HEAD
+
 ARDUINO = "COM3"
 #PI = "COM6"
 #SerialOutput = serial.Serial(PI, baudrate=115200, timeout = 1, bytesize=8, parity='N', stopbits=1)
-=======
+
 #ARDUINO = "/dev/ttyAMA0"
 #
 #>>>>>>> 759ba770ad7c9119ac8009bfc86c13e9fdee6b8c
-Sensor = [0] * 13
+Sensor = np.empty(shape=(13))
 
 #Read multiple inputs from serial port
 
@@ -35,6 +35,7 @@ def Read(SerialInput):
 
 def ReadSerial(SerialInput):
     try:
+        SerialInput.flush()
         char = Read(SerialInput)
         String = ''
         while (char != '\t'.encode('utf-8')):
@@ -69,7 +70,7 @@ def ReadSerial(SerialInput):
             #print (CurrentSensor, SensorValue, sep = " - ")
         #print (Sensor)
         return Sensor
-    except ValueError:
+    except:
         pass       
 
     
