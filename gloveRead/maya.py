@@ -15,9 +15,12 @@ connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 connection.connect(ADDRESS)
 
 def OpenConnection():
-    connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #open socket
-    connection.connect(ADDRESS)   #connect to maya
-    return connection
+    try:
+        connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #open socket
+        connection.connect(ADDRESS)   #connect to maya
+        return True
+    except ConnectionRefusedError:
+        return False
 
 def SendCommand(Command):
 
