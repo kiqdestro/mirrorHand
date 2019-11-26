@@ -134,12 +134,12 @@ def main():
                         normalized_value = 0
                     old_normalized_value = normalized_value
 
-                    #print("[{}, {}]".format(i, float(normalized_value)*180))
+                    print("[{}, {}]".format(i, float(normalized_value)*180))
 
                     # ctrl.setPos(i, normalized_value)
 
-                    # CommandString = "setAttr(\"joint" + str(value[0]) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
-                    # maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+                    CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
+                    maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
                 
                 except (IndexError, ValueError):
                     print("erro")
