@@ -18,22 +18,30 @@ class ServoControl():
         # kit.servo[0].set_pulse_width_range(1000, 2000)
 
 		kit = ServoKit(channels = 16)
-		kit.servo[0].set_pulse_width_range(625, 2580)
-		kit.servo[1].set_pulse_width_range(500, 2620)
-		kit.servo[2].set_pulse_width_range(500, 2620)
-		kit.servo[3].set_pulse_width_range(540, 2600)
-		kit.servo[4].set_pulse_width_range(540, 2650)
-		kit.servo[5].set_pulse_width_range(540, 2650) #A
-		kit.servo[6].set_pulse_width_range(520, 2600) #B
-		kit.servo[7].set_pulse_width_range(520, 2600) #C *this one is turning only something around 120 degrees
-		kit.servo[8].set_pulse_width_range(520, 2600) #D
-		kit.servo[9].set_pulse_width_range(520, 2650) #E
-		kit.servo[10].set_pulse_width_range(500, 2650) #F
+
+        kit.servo[4].set_pulse_width_range(520, 2650)
+        kit.servo[3].set_pulse_width_range(500, 2650)
+        kit.servo[2].set_pulse_width_range(520, 2600)
+        kit.servo[1].set_pulse_width_range(520, 2600)
+        kit.servo[0].set_pulse_width_range(540, 2650)
+
+
+		# kit.servo[0].set_pulse_width_range(625, 2580)
+		# kit.servo[1].set_pulse_width_range(500, 2620)
+		# kit.servo[2].set_pulse_width_range(500, 2620)
+		# kit.servo[3].set_pulse_width_range(540, 2600)
+		# kit.servo[4].set_pulse_width_range(540, 2650)
+		# kit.servo[5].set_pulse_width_range(540, 2650) #A
+		# kit.servo[6].set_pulse_width_range(520, 2600) #B
+		# kit.servo[7].set_pulse_width_range(520, 2600) #C *this one is turning only something around 120 degrees
+		# kit.servo[8].set_pulse_width_range(520, 2600) #D
+		# kit.servo[9].set_pulse_width_range(520, 2650) #E
+		# kit.servo[10].set_pulse_width_range(500, 2650) #F
 
 	def setPos(self, servoID, position):
 		kit.servo[servoID].angle = (position * 180)
 
-bluetoothSerial = serial.Serial("/dev/rfcomm0", baudrate=9600)
+bluetoothSerial = si.InitSerial()
 maximum = [0]*10
 minimum = [0]*10
 values = [0]*10
@@ -59,14 +67,14 @@ def main():
 
     while(elapsed_time < 2):
     #while(True):
-        sensor_max = (bluetoothSerial.readline()).decode("utf-8")[:-2].split(",")
+        sensor_max = si.ReadSerial(bluetoothSerial)
         print(sensor_max)
         #input("Enter to continue")
 
         try:
-            print("sensor_max[0]: " + sensor_max[0])
-            print("sensor_max[1]: " + sensor_max[1])
-            maximum[int(sensor_max[0])] = int(sensor_max[1])
+            # print("sensor_max[0]: " + sensor_max[0])
+            # print("sensor_max[1]: " + sensor_max[1])
+            maximum = sensor_max[:]
         except:
             continue
 
@@ -83,14 +91,14 @@ def main():
     elapsed_time = 0
 
     while(elapsed_time < 2):
-        sensor_min = (bluetoothSerial.readline()).decode("utf-8")[:-2].split(",")
+        sensor_min = si.ReadSerial(bluetoothSerial)
         print(sensor_min)
 
         try:
-            print("sensor_min[0]: " + sensor_min[0])
-            print("sensor_min[1]: " + sensor_min[1])
-        except:
-            minimum[sensor_min[0]] = sensor_min[1]
+            # print("sensor_min[0]: " + sensor_min[0])
+            # print("sensor_min[1]: " + sensor_min[1])
+            minimum = sensor_min[:]
+        except:            
             continue
 
         elapsed_time = time.time() - start_time
@@ -103,27 +111,32 @@ def main():
 
     while(True):
 
-        value = (bluetoothSerial.readline()).decode("utf-8")[:-2].split(",")
+        value = si.ReadSerial(bluetoothSerial)
         #value = si.ReadSerial(serial)                                   #Loop
         #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values  
         print(value)
-        try:
-            normalized_value = (1-((int(value[1])- minimum[int(value[0])])/(maximum[int(value[0])]-minimum[int(value[0])]))) # Normalizing
-            if (normalized_value > 1):
-                normalized_value = 1
-            if (normalized_value < 0):
-                normalized_value = 0
 
-            print("[{}, {}]".format(value[0], float(normalized_value)*180))
+        for i in range(len(value)):
+            try:
+                normalized_value = (1-((Values[i]- Min[i])/(Max[i]-Min[i]))) # Normalizing
+                if (normalized_value > 1):
+                    normalized_value = 1
+                if (normalized_value < 0):
+                    normalized_value = 0
 
-            ctrl.setPos(int(value[0]), normalized_value)
+                print("[{}, {}]".format(i, float(normalized_value)*180))
 
-            CommandString = "setAttr(\"joint" + str(value[0]) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
-            maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+                ctrl.setPos(i, normalized_value)
+
+                print()
+
+                CommandString = "setAttr(\"joint" + str(value[0]) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
+                maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
             
-        except (IndexError, ValueError):
-            print("erro")
-            continue
+            except (IndexError, ValueError):
+                print("erro")
+                continue
+        
 
 if __name__ == "__main__":
     main()
