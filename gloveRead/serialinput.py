@@ -37,7 +37,6 @@ def ReadSerial(SerialInput):
     try:
         SerialInput.flush()
         char = Read(SerialInput)
-        print(char)
         String = ''
         while (char != '\t'.encode('utf-8')):
             char = Read(SerialInput)
