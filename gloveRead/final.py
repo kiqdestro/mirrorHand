@@ -44,9 +44,10 @@ class ServoControl():
         kit.servo[servoID].angle = (position * 180)
 
 bluetoothSerial = si.InitSerial()
-maximum = [0]*10
-minimum = [0]*10
-values = [0]*10
+maximum = [0]*13
+minimum = [0]*13
+values = [0]*13
+oldvalues = [0]*13
 value = 0
 ctrl = ServoControl()
 
@@ -114,7 +115,6 @@ def main():
     print("inicio")
 
     while(True):
-
         value = si.ReadSerial(bluetoothSerial)
         #value = si.ReadSerial(serial)                                   #Loop
         #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values  
@@ -130,6 +130,7 @@ def main():
                     normalized_value = 1
                 if (normalized_value < 0):
                     normalized_value = 0
+                old_normalized_value = normalized_value
 
                 #print("[{}, {}]".format(i, float(normalized_value)*180))
 
@@ -140,6 +141,9 @@ def main():
             
             except (IndexError, ValueError):
                 print("erro")
+                continue
+            except (ZeroDivisionError):
+                normalized_value = old_normalized_value
                 continue
         
 
