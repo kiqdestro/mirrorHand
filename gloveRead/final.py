@@ -5,6 +5,7 @@ import serialinput as si
 import itsAlive
 import serial
 import time
+import maya as maya
 
 kit = ServoKit(channels = 16)
 
@@ -39,7 +40,18 @@ values = [0]*10
 value = 0
 ctrl = ServoControl()
 
+def openMayaConnection():
+    try:
+        Maya.OpenConnection()
+        return True
+    except:
+        print("Erro conectando com Maya")
+        return False
+
 def main():
+
+   # maya.OpenConnection()
+
     itsAlive.firstMovement()
 
     print("Estique os dedos e espere para calibrar")
