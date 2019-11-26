@@ -40,17 +40,12 @@ values = [0]*10
 value = 0
 ctrl = ServoControl()
 
-def openMayaConnection():
-    try:
-        Maya.OpenConnection()
-        return True
-    except:
-        print("Erro conectando com Maya")
-        return False
-
 def main():
 
-   # maya.OpenConnection()
+    maya_connect = maya.OpenConnection()
+    if(maya_connect):
+        print("Connected to maya")
+    else: print("Maya connection not present")
 
     itsAlive.firstMovement()
 
