@@ -17,9 +17,9 @@ class ServoControl():
         # kit.servo[0].angle = 180
         # kit.servo[0].actuation_range = 160
         # kit.servo[0].set_pulse_width_range(1000, 2000)
-
-		kit = ServoKit(channels = 16)
-
+        
+        kit = ServoKit(channels = 16)
+        
         kit.servo[4].set_pulse_width_range(520, 2650)
         kit.servo[3].set_pulse_width_range(500, 2650)
         kit.servo[2].set_pulse_width_range(520, 2600)
