@@ -104,7 +104,7 @@ def main():
     while(True):
 
         value = (bluetoothSerial.readline()).decode("utf-8")[:-2].split(",")
-        # value = si.ReadSerial(serial)                                   #Loop
+        #value = si.ReadSerial(serial)                                   #Loop
         #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values  
         print(value)
         try:
@@ -114,11 +114,12 @@ def main():
             if (normalized_value < 0):
                 normalized_value = 0
 
-            print("hehehe")
-
             print("[{}, {}]".format(value[0], float(normalized_value)*180))
 
             ctrl.setPos(int(value[0]), normalized_value)
+
+            CommandString = "setAttr(\"joint" + str(value[0]) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
+            maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
             
         except (IndexError, ValueError):
             print("erro")
