@@ -139,9 +139,9 @@ def main():
                 print("[{}, {}]".format(i, float(normalized_value)*180))
 
                 # ctrl.setPos(i, normalized_value)
-
-                CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
-                maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+                if(maya_connect):
+                    CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
+                    maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
             
             except (IndexError, ValueError):
                 print("erro")
@@ -150,17 +150,17 @@ def main():
                 normalized_value = old_normalized_value
                 continue
 
-
-        try:
-            CommandString = "setAttr(\"b.rotateX\"," + str(Values[10]*-1) + ");"     #Build MEL CommandString
-            Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
-            CommandString = "setAttr(\"b.rotateY\"," + str(Values[11]*-1) + ");"     #Build MEL CommandString
-            Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
-            CommandString = "setAttr(\"b.rotateZ\"," + str(Values[12]) + ");"     #Build MEL CommandString
-            Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
-        except TypeError:
-            print("TypeError IMU")
-            pass
+        if(maya_connect):
+            try:
+                CommandString = "setAttr(\"b.rotateX\"," + str(Values[10]*-1) + ");"     #Build MEL CommandString
+                Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+                CommandString = "setAttr(\"b.rotateY\"," + str(Values[11]*-1) + ");"     #Build MEL CommandString
+                Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+                CommandString = "setAttr(\"b.rotateZ\"," + str(Values[12]) + ");"     #Build MEL CommandString
+                Maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+            except TypeError:
+                print("TypeError IMU")
+                pass
         
 
 if __name__ == "__main__":
