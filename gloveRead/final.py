@@ -46,13 +46,15 @@ maximum = [0]*13
 minimum = [0]*13
 values = [0]*13
 oldvalues = [0]*13
-value = 0
+sensor_max = [0]*13
+sensor_min = [0]*13
+value = [0]*13
 ctrl = ServoControl()
 
 def main():
 
-    maya_connect = maya.OpenConnection()
     print ("Trying to connect to Maya, ^C to cancel")
+    maya_connect = maya.OpenConnection()    
     if(maya_connect):
         print("Connected to maya")
     else: print("Maya connection not present")
@@ -95,7 +97,7 @@ def main():
 
     while(elapsed_time < 2):
         sensor_min = si.ReadSerial(bluetoothSerial)
-        print(sensor_min)
+#        print(sensor_min)
 
         try:
             # print("sensor_min[0]: " + sensor_min[0])
@@ -145,7 +147,7 @@ def main():
                 except (ZeroDivisionError):
                     normalized_value = old_normalized_value
                     continue
-            except (TypeError):
+        except TypeError:
                 pass
         
 

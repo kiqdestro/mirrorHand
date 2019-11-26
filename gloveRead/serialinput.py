@@ -2,7 +2,6 @@
 #Joao Carlos Cardoso - 2019
 
 import serial
-import numpy as np
 import time
 
 
@@ -13,7 +12,7 @@ ARDUINO = "/dev/rfcomm0"
 #ARDUINO = "/dev/ttyAMA0"
 #
 #>>>>>>> 759ba770ad7c9119ac8009bfc86c13e9fdee6b8c
-Sensor = np.empty(shape=(13))
+Sensor = [0]*13
 
 #Read multiple inputs from serial port
 
