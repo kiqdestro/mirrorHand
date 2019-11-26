@@ -8,11 +8,11 @@ import time
 kit = ServoKit(channels = 16)
 
 for i in range(0, 10000):
-	for j in range (0, 11):
-		if(i%2 == 0):
-			kit.servo[j].angle = 180
-		else:
-			kit.servo[j].angle = 0
+    for j in range (0, 11):
+        if(i%2 == 0):
+            kit.servo[j].angle = 180
+        else:
+            kit.servo[j].angle = 0
 
-	time.sleep(0.5)
+    time.sleep(0.5)
 

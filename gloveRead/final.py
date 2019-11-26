@@ -11,37 +11,37 @@ import os
 kit = ServoKit(channels = 16)
 
 class ServoControl():
-	def __init__(self):
+    def __init__(self):
         
-            # EXAMPLES:
-            # kit.servo[0].angle = 180
-            # kit.servo[0].actuation_range = 160
-            # kit.servo[0].set_pulse_width_range(1000, 2000)
+        # EXAMPLES:
+        # kit.servo[0].angle = 180
+        # kit.servo[0].actuation_range = 160
+        # kit.servo[0].set_pulse_width_range(1000, 2000)
 
 
-	    kit = ServoKit(channels = 16)
+        kit = ServoKit(channels = 16)
        
-            kit.servo[4].set_pulse_width_range(520, 2650)
-            kit.servo[3].set_pulse_width_range(500, 2650)
-            kit.servo[2].set_pulse_width_range(520, 2600)
-            kit.servo[1].set_pulse_width_range(520, 2600)
-            kit.servo[0].set_pulse_width_range(540, 2650)
+        kit.servo[4].set_pulse_width_range(520, 2650)
+        kit.servo[3].set_pulse_width_range(500, 2650)
+        kit.servo[2].set_pulse_width_range(520, 2600)
+        kit.servo[1].set_pulse_width_range(520, 2600)
+        kit.servo[0].set_pulse_width_range(540, 2650)
 
 
-            # kit.servo[0].set_pulse_width_range(625, 2580)
-            # kit.servo[1].set_pulse_width_range(500, 2620)
-            # kit.servo[2].set_pulse_width_range(500, 2620)
-            # kit.servo[3].set_pulse_width_range(540, 2600)
-            # kit.servo[4].set_pulse_width_range(540, 2650)
-            # kit.servo[5].set_pulse_width_range(540, 2650) #A
-            # kit.servo[6].set_pulse_width_range(520, 2600) #B
-            # kit.servo[7].set_pulse_width_range(520, 2600) #C *this one is turning only something around 120 degrees
-            # kit.servo[8].set_pulse_width_range(520, 2600) #D
-            # kit.servo[9].set_pulse_width_range(520, 2650) #E
-            # kit.servo[10].set_pulse_width_range(500, 2650) #F
+        # kit.servo[0].set_pulse_width_range(625, 2580)
+        # kit.servo[1].set_pulse_width_range(500, 2620)
+        # kit.servo[2].set_pulse_width_range(500, 2620)
+        # kit.servo[3].set_pulse_width_range(540, 2600)
+        # kit.servo[4].set_pulse_width_range(540, 2650)
+        # kit.servo[5].set_pulse_width_range(540, 2650) #A
+        # kit.servo[6].set_pulse_width_range(520, 2600) #B
+        # kit.servo[7].set_pulse_width_range(520, 2600) #C *this one is turning only something around 120 degrees
+        # kit.servo[8].set_pulse_width_range(520, 2600) #D
+        # kit.servo[9].set_pulse_width_range(520, 2650) #E
+        # kit.servo[10].set_pulse_width_range(500, 2650) #F
 
-	def setPos(self, servoID, position):
-		kit.servo[servoID].angle = (position * 180)
+    def setPos(self, servoID, position):
+        kit.servo[servoID].angle = (position * 180)
 
 bluetoothSerial = si.InitSerial()
 maximum = [0]*10
