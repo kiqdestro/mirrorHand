@@ -8,8 +8,6 @@ import serial
 import time
 import os
 
-kit = ServoKit(channels = 16)
-
 class ServoControl():
     def __init__(self):
         
@@ -54,6 +52,7 @@ ctrl = ServoControl()
 def main():
 
     maya_connect = maya.OpenConnection()
+    print ("Trying to connect to Maya, ^C to cancel")
     if(maya_connect):
         print("Connected to maya")
     else: print("Maya connection not present")
@@ -120,31 +119,34 @@ def main():
         #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values  
         print("value: " + str(value))
 
-        for i in range(len(value)):
-            try:
+        try:
+            for i in range(len(value)):
+                try:
 
-                #os.system("clear")
+                    #os.system("clear")
 
-                normalized_value = (1-((value[i]- minimum[i])/(maximum[i]-minimum[i]))) # Normalizing
-                if (normalized_value > 1):
-                    normalized_value = 1
-                if (normalized_value < 0):
-                    normalized_value = 0
-                old_normalized_value = normalized_value
+                    normalized_value = (1-((value[i]- minimum[i])/(maximum[i]-minimum[i]))) # Normalizing
+                    if (normalized_value > 1):
+                        normalized_value = 1
+                    if (normalized_value < 0):
+                        normalized_value = 0
+                    old_normalized_value = normalized_value
 
-                #print("[{}, {}]".format(i, float(normalized_value)*180))
+                    #print("[{}, {}]".format(i, float(normalized_value)*180))
 
-                # ctrl.setPos(i, normalized_value)
+                    # ctrl.setPos(i, normalized_value)
 
-                # CommandString = "setAttr(\"joint" + str(value[0]) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
-                # maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
-            
-            except (IndexError, ValueError):
-                print("erro")
-                continue
-            except (ZeroDivisionError):
-                normalized_value = old_normalized_value
-                continue
+                    # CommandString = "setAttr(\"joint" + str(value[0]) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
+                    # maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
+                
+                except (IndexError, ValueError):
+                    print("erro")
+                    continue
+                except (ZeroDivisionError):
+                    normalized_value = old_normalized_value
+                    continue
+            except (TypeError):
+                pass
         
 
 if __name__ == "__main__":
