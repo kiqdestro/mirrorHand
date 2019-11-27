@@ -21,11 +21,11 @@ class ServoControl():
 
         # kit = ServoKit(channels = 16)
        
-        kit.servo[4].set_pulse_width_range(520, 2650)
-        kit.servo[3].set_pulse_width_range(500, 2650)
-        kit.servo[2].set_pulse_width_range(520, 2600)
-        kit.servo[1].set_pulse_width_range(520, 2600)
-        kit.servo[0].set_pulse_width_range(540, 2650)
+        kit.servo[4].set_pulse_width_range(520, 2650) # minimo
+        kit.servo[3].set_pulse_width_range(500, 2650) # anelar
+        kit.servo[2].set_pulse_width_range(520, 2600) # médio
+        kit.servo[1].set_pulse_width_range(520, 2600) # indicador
+        kit.servo[0].set_pulse_width_range(540, 2650) # polegar
 
 
         # kit.servo[0].set_pulse_width_range(625, 2580)
@@ -135,9 +135,22 @@ def main():
                         normalized_value = 0
                     old_normalized_value = normalized_value
 
-                    print("[{}, {}]".format(i, float(normalized_value)*180))
+                    # print("[{}, {}]".format(i, float(normalized_value)*180))
 
-                    ctrl.setPos(i, normalized_value)
+                    minimo = [6, 7]
+                    anelar = [4, 5]
+                    medio = [2, 3]
+                    indicador = [0, 1]
+                    polegar = None
+
+                    dedos = [polegar, indicador, medio, anelar, minimo]
+
+                    for i in range(5):
+                        if (dedos[i]):
+                            ctrl.setPos(i, (sum(dedos[i])/2))
+
+
+                    # ctrl.setPos(i, normalized_value)
                     if(maya_connect):
                         CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
                         maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
