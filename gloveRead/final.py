@@ -158,8 +158,8 @@ def main():
                     elif(i == 4 or i == 5):
                         dedos[3] += (normalized_value / 2.0)
 
-                    elif(i == 6 or i == 7):
-                        dedos[4] += (normalized_value / 2.0) 
+                    elif(i == 6):
+                        dedos[4] += (normalized_value) 
 
                     
 
