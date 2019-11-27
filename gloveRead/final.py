@@ -8,6 +8,8 @@ import serial
 import time
 import os
 
+kit = ServoKit(channels = 16)
+
 class ServoControl():
     def __init__(self):
         
@@ -17,7 +19,7 @@ class ServoControl():
         # kit.servo[0].set_pulse_width_range(1000, 2000)
 
 
-        kit = ServoKit(channels = 16)
+        # kit = ServoKit(channels = 16)
        
         kit.servo[4].set_pulse_width_range(520, 2650)
         kit.servo[3].set_pulse_width_range(500, 2650)
@@ -59,7 +61,7 @@ def main():
         print("Connected to maya")
     else: print("Maya connection not present")
 
-#    itsAlive.firstMovement()
+   itsAlive.firstMovement()
 
     print("Estique os dedos e espere para calibrar")
 
@@ -85,7 +87,7 @@ def main():
 
         elapsed_time = time.time() - start_time
 
-#    itsAlive.closeHand()
+   itsAlive.closeHand()
 
     print("Dobre os dedos e espere para calibrar")
 
