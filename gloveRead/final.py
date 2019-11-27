@@ -139,6 +139,8 @@ def main():
                         normalized_value = 0
                     old_normalized_value = normalized_value
 
+                    print("old_normalized_value: " + str(old_normalized_value))
+
                     # print("[{}, {}]".format(i, float(normalized_value)*180))
 
                     # ordem: polegar, indicador, medio, anelar, minimo (desativado , [0, 1], [2, 3], [4, 5], [6, 7])
