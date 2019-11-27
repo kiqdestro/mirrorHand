@@ -171,18 +171,18 @@ def main():
                 except IndexError as index:
                     print("erro index: ")
                     print(index)
-                    input()
+                    # input()
                     continue
 
                 except ValueError as value:
                     print("erro value: ")
                     print(value)
-                    input()
+                    # input()
                     continue
 
                 except ZeroDivisionError as zero:
                     print(zero)
-                    input()
+                    # input()
                     normalized_value = old_normalized_value
                     continue
 
