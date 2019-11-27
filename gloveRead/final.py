@@ -101,7 +101,7 @@ def main():
     start_time = time.time()
     elapsed_time = 0
 
-    while(elapsed_time < 2):
+    while(elapsed_time < 4):
         sensor_min = si.ReadSerial(bluetoothSerial)
 #        print(sensor_min)
 
@@ -131,7 +131,7 @@ def main():
                 try:
 
                     #os.system("clear")
-                    print(value[i], minimum[i], maximum[i], minimum[i], sep=' - ')
+                    print(value[i], minimum[i], maximum[i], sep=' - ')
                     normalized_value = (1-((value[i]- minimum[i])/(maximum[i]-minimum[i]))) # Normalizing
                     if (normalized_value > 1):
                         normalized_value = 1
