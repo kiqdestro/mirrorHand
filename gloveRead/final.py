@@ -147,6 +147,7 @@ def main():
 
                     for i in range(5):
                         if (dedos[i]):
+                            print("dedo: {}, resultado: {}, valores individuais: [{}, {}]\n", format(i, sum(dedos[i])/2, dedos[i][0], dedos[i][1])),
                             ctrl.setPos(i, (sum(dedos[i])/2))
 
 
