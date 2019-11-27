@@ -195,7 +195,7 @@ def main():
             for i in range(1, 5):
                 print("dedos[{}]: {}".format(i, dedos[i]))
                 # print("\n" + testeKIQ)
-                ctrl.setPos(i, dedos[i])
+                ctrl.setPos(i, max(1.0 - dedos[i], 0.0))
                 dedos[i] == 0.0
 
             if(maya_connect):
