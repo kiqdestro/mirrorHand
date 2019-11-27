@@ -155,9 +155,18 @@ def main():
                         CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
                         maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
                 
-                except (IndexError, ValueError):
-                    print("erro")
+                except IndexError as index:
+                    print("erro index: ")
+                    print(index)
+                    input()
                     continue
+
+                except ValueError as value:
+                    print("erro value: ")
+                    print(value)
+                    input()
+                    continue
+
                 except (ZeroDivisionError):
                     normalized_value = old_normalized_value
                     continue
