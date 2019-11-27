@@ -15,6 +15,10 @@
 ### Cronograma:
 
  - [Cronograma](https://docs.google.com/spreadsheets/d/1rPYKbOurIVPeYO_swWk3HFBk6oQO6jvVg92YagprTJc/edit?usp=sharing)
+ 
+### Relatório Final:
+
+ - [Relatório FInal](Relat_rio_final___MirrorHand_rev1.pdf)
 
 ### Problema:
 
