@@ -144,16 +144,16 @@ def main():
                     # ordem: polegar, indicador, medio, anelar, minimo (desativado , [0, 1], [2, 3], [4, 5], [6, 7])
 
                     if(i == 0 or i == 1):
-                        dedos[1] += old_normalized_value / 2
+                        dedos[1] += (old_normalized_value / 2)
                     
                     elif(i == 2 or i == 3):
-                        dedos[2] += old_normalized_value / 2
+                        dedos[2] += (old_normalized_value / 2)
 
                     elif(i == 4 or i == 5):
-                        dedos[3] += old_normalized_value / 2
+                        dedos[3] += (old_normalized_value / 2)
 
                     elif(i == 6 or i == 7):
-                        dedos[4] += old_normalized_value / 2 
+                        dedos[4] += (old_normalized_value / 2) 
 
                     
 
@@ -187,7 +187,7 @@ def main():
                     continue
 
             for i in range(1, 5):
-                print("dedos[i]: " + str(dedos[i]))
+                print("dedos[{}]: {}".format(i, dedos[i]))
                 ctrl.setPos(i, dedos[i])
                 dedos[i] == 0.0
 
