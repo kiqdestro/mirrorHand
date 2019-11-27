@@ -10,6 +10,8 @@ import os
 
 kit = ServoKit(channels = 16)
 
+dedos = [0.0, 0.0, 0.0, 0.0, 0.0] # ordem: polegar, indicador, medio, anelar, minimo (desativado , [0, 1], [2, 3], [4, 5], [6, 7])
+
 class ServoControl():
     def __init__(self):
         
@@ -139,17 +141,26 @@ def main():
 
                     # print("[{}, {}]".format(i, float(normalized_value)*180))
 
-                    minimo = [6, 7]
-                    anelar = [4, 5]
-                    medio = [2, 3]
-                    indicador = [0, 1]
-                    polegar = None
+                    # ordem: polegar, indicador, medio, anelar, minimo (desativado , [0, 1], [2, 3], [4, 5], [6, 7])
 
-                    dedos = [polegar, indicador, medio, anelar, minimo]
+                    if(i == 0 or i == 1):
+                        dedos[1] += normalized_value / 2
+                    
+                    elif(i == 2 or i == 3):
+                        dedos[2] += normalized_value / 2
 
-                    for i in range(1,5):
-                        print("dedo: {}, resultado: {}, valores individuais: [{}, {}]\n", format(i, sum(dedos[i])/2, dedos[i][0], dedos[i][1])),
-                        ctrl.setPos(i, (sum(dedos[i])/2))
+                    elif(i == 4 or i == 5):
+                        dedos[3] += normalized_value / 2
+
+                    elif(i == 6 or i == 7):
+                        dedos[4] += normalized_value / 2 
+
+                    
+
+                    # for i in range(1,5):
+                        # print("dedo: {}, resultado: {}, valores individuais: [{}, {}]\n", format(i, sum(dedos[i])/2, dedos[i][0], dedos[i][1])),
+                        # pos_value = sum(dedos[i][0], dedos[i][1])
+                        # ctrl.setPos(i, (sum(dedos[i])/2))
 
 
                     # ctrl.setPos(i, normalized_value)
@@ -174,6 +185,10 @@ def main():
                     input()
                     normalized_value = old_normalized_value
                     continue
+
+            for i in range(1, 5):
+                ctrl.setPos(i, dedos[i])
+                dedos[i] == 0.0
 
             if(maya_connect):
                 try:
