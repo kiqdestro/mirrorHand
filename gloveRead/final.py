@@ -150,7 +150,7 @@ def main():
 
                     if(i == 0 or i == 1):
                         dedos[1] += (normalized_value / 4.0)
-                        testeKIQ += "i: {}, valor: {} | ".format(i, (old_normalized_value / 4.0))
+                        # testeKIQ += "i: {}, valor: {} | ".format(i, (old_normalized_value / 4.0))
                     
                     elif(i == 2 or i == 3):
                         dedos[2] += (normalized_value / 4.0)
