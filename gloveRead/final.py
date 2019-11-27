@@ -60,8 +60,8 @@ def main():
     if(maya_connect):
         print("Connected to maya")
     else: print("Maya connection not present")
-
-   itsAlive.firstMovement()
+    
+    itsAlive.firstMovement()
 
     print("Estique os dedos e espere para calibrar")
 
@@ -86,8 +86,8 @@ def main():
             continue
 
         elapsed_time = time.time() - start_time
-
-   itsAlive.closeHand()
+        
+    itsAlive.closeHand()
 
     print("Dobre os dedos e espere para calibrar")
 
