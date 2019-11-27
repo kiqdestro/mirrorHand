@@ -191,6 +191,7 @@ def main():
 
             for i in range(1, 5):
                 print("dedos[{}]: {}".format(i, dedos[i]))
+                print("\n{}".format(testeKIQ))
                 ctrl.setPos(i, dedos[i])
                 dedos[i] == 0.0
 
