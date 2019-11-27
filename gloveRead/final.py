@@ -8,6 +8,8 @@ import serial
 import time
 import os
 
+no_fucking_extra_outputs = True
+
 kit = ServoKit(channels = 16)
 
 dedos = [0.0, 0.0, 0.0, 0.0, 0.0] # ordem: polegar, indicador, medio, anelar, minimo (desativado , [0, 1], [2, 3], [4, 5], [6, 7])
@@ -127,14 +129,17 @@ def main():
             dedos[i] = 0.0
         value = si.ReadSerial(bluetoothSerial)
         #value = si.ReadSerial(serial)                                   #Loop
-        #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values  
-        print("value: " + str(value))
+        #print("Sensor", i, Values[i], sep=' - ')                       #Print sensor values
+
+        if(not no_fucking_extra_outputs):
+            print("value: " + str(value))
         try:
             for i in range(len(value)):
                 try:
 
                     #os.system("clear")
-                    print(value[i], minimum[i], maximum[i], sep=' - ')
+                    if(not no_fucking_extra_outputs):
+                        print(value[i], minimum[i], maximum[i], sep=' - ')
                     normalized_value = (1-((value[i]- minimum[i])/(maximum[i]-minimum[i]))) # Normalizing
                     if (normalized_value > 1):
                         normalized_value = 1
@@ -142,7 +147,8 @@ def main():
                         normalized_value = 0
                     old_normalized_value = normalized_value
 
-                    print("old_normalized_value: " + str(old_normalized_value))
+                    if(not no_fucking_extra_outputs):
+                        print("old_normalized_value: " + str(old_normalized_value))
 
                     # print("[{}, {}]".format(i, float(normalized_value)*180))
 
@@ -175,25 +181,29 @@ def main():
                         maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
                 
                 except IndexError as index:
-                    print("erro index: ")
-                    print(index)
+                    if(not no_fucking_extra_outputs):
+                        print("erro index: ")
+                        print(index)
                     # input()
                     continue
 
                 except ValueError as value:
-                    print("erro value: ")
-                    print(value)
+                    if(not no_fucking_extra_outputs):
+                        print("erro value: ")
+                        print(value)
                     # input()
                     continue
 
                 except ZeroDivisionError as zero:
-                    print(zero)
+                    if(not no_fucking_extra_outputs):
+                        print(zero)
                     # input()
                     normalized_value = old_normalized_value
                     continue
 
             for i in range(1, 5):
-                print("dedos[{}]: {}".format(i, dedos[i]))
+                if(not no_fucking_extra_outputs):
+                    print("dedos[{}]: {}".format(i, dedos[i]))
                 # print("\n" + testeKIQ)
                 ctrl.setPos(i, max(1.0 - dedos[i], 0.0))
                 dedos[i] == 0.0
@@ -207,7 +217,8 @@ def main():
                     CommandString = "setAttr(\"b.rotateZ\"," + str(value[12]) + ");"     #Build MEL CommandString
                     maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
                 except TypeError:
-                    print("TypeError IMU")
+                    if(not no_fucking_extra_outputs):
+                        print("TypeError IMU")
                     pass
         except TypeError:
             continue

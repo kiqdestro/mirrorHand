@@ -4,6 +4,8 @@
 import serial
 import time
 
+no_fucking_extra_outputs = True
+
 
 ARDUINO = "/dev/rfcomm0"
 #PI = "COM6"
@@ -44,7 +46,10 @@ def ReadSerial(SerialInput):
             String = String + char.decode()
             char = Read(SerialInput)
         String = String + char.decode()
-        print(String)
+        
+        if(not no_fucking_extra_outputs):
+            print(String)
+
         i = 0
         while (String[i] != "\n"):
             #print(String[i])
