@@ -69,7 +69,7 @@ def main():
 
     print("Estique os dedos e espere para calibrar")
 
-    time.sleep(5)
+    time.sleep(3)
     # input("Estique os dedos e pressione espaco para calibrar")
 
     start_time = time.time()
@@ -95,7 +95,7 @@ def main():
 
     print("Dobre os dedos e espere para calibrar")
 
-    time.sleep(5)
+    time.sleep(3)
     
     # input("Dobre os dedos e pressione espaco para calibrar")
     start_time = time.time()
