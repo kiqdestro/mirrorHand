@@ -187,6 +187,7 @@ def main():
                     continue
 
             for i in range(1, 5):
+                print("dedos[i]: " + str(dedos[i]))
                 ctrl.setPos(i, dedos[i])
                 dedos[i] == 0.0
 
