@@ -170,7 +170,9 @@ def main():
                     input()
                     continue
 
-                except (ZeroDivisionError):
+                except ZeroDivisionError as zero:
+                    print(zero)
+                    input()
                     normalized_value = old_normalized_value
                     continue
 
