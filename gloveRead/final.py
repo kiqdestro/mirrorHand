@@ -12,6 +12,8 @@ kit = ServoKit(channels = 16)
 
 dedos = [0.0, 0.0, 0.0, 0.0, 0.0] # ordem: polegar, indicador, medio, anelar, minimo (desativado , [0, 1], [2, 3], [4, 5], [6, 7])
 
+testeKIQ = ""
+
 class ServoControl():
     def __init__(self):
         
@@ -144,16 +146,17 @@ def main():
                     # ordem: polegar, indicador, medio, anelar, minimo (desativado , [0, 1], [2, 3], [4, 5], [6, 7])
 
                     if(i == 0 or i == 1):
-                        dedos[1] += (old_normalized_value / 2)
+                        dedos[1] += (old_normalized_value / 2.0)
+                        testeKIQ += "i: {}, valor: {} | ".format(i, (old_normalized_value / 2.0))
                     
                     elif(i == 2 or i == 3):
-                        dedos[2] += (old_normalized_value / 2)
+                        dedos[2] += (old_normalized_value / 2.0)
 
                     elif(i == 4 or i == 5):
-                        dedos[3] += (old_normalized_value / 2)
+                        dedos[3] += (old_normalized_value / 2.0)
 
                     elif(i == 6 or i == 7):
-                        dedos[4] += (old_normalized_value / 2) 
+                        dedos[4] += (old_normalized_value / 2.0) 
 
                     
 
