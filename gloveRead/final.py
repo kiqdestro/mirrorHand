@@ -121,8 +121,6 @@ def main():
     # input("Aperte enter para iniciar")
     print("inicio")
 
-    input()
-
     while(True):
         value = si.ReadSerial(bluetoothSerial)
         #value = si.ReadSerial(serial)                                   #Loop
@@ -191,7 +189,7 @@ def main():
 
             for i in range(1, 5):
                 print("dedos[{}]: {}".format(i, dedos[i]))
-                print("\n{}".format(testeKIQ))
+                print("\n" + testeKIQ)
                 ctrl.setPos(i, dedos[i])
                 dedos[i] == 0.0
 

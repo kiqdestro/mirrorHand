@@ -12,8 +12,10 @@ def firstMovement():
         ctrl.setPos(i, 1)
     
     for i in range(11):
-        ctrl.setPos(i, 0)
         time.sleep(0.5)
+        ctrl.setPos(i, 0)
+    
+    time.sleep(0.1)
     
     for i in range(11):
         ctrl.setPos(i, 1)
