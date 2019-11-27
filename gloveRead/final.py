@@ -117,6 +117,8 @@ def main():
     # input("Aperte enter para iniciar")
     print("inicio")
 
+    input()
+
     while(True):
         value = si.ReadSerial(bluetoothSerial)
         #value = si.ReadSerial(serial)                                   #Loop
