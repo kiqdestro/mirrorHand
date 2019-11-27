@@ -147,10 +147,9 @@ def main():
 
                     dedos = [polegar, indicador, medio, anelar, minimo]
 
-                    for i in range(5):
-                        if (dedos[i]):
-                            print("dedo: {}, resultado: {}, valores individuais: [{}, {}]\n", format(i, sum(dedos[i])/2, dedos[i][0], dedos[i][1])),
-                            ctrl.setPos(i, (sum(dedos[i])/2))
+                    for i in range(1,5):
+                        print("dedo: {}, resultado: {}, valores individuais: [{}, {}]\n", format(i, sum(dedos[i])/2, dedos[i][0], dedos[i][1])),
+                        ctrl.setPos(i, (sum(dedos[i])/2))
 
 
                     # ctrl.setPos(i, normalized_value)
