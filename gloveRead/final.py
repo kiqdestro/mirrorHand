@@ -135,7 +135,7 @@ def main():
 
                     print("[{}, {}]".format(i, float(normalized_value)*180))
 
-                    # ctrl.setPos(i, normalized_value)
+                    ctrl.setPos(i, normalized_value)
                     if(maya_connect):
                         CommandString = "setAttr(\"joint" + str(i+1) + ".rotateZ\"," + str(normalized_value*90) + ");"     #Build MEL CommandString
                         maya.SendCommand(CommandString)                                 #Send MEL Commando to MAYA
