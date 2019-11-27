@@ -12,8 +12,6 @@ kit = ServoKit(channels = 16)
 
 dedos = [0.0, 0.0, 0.0, 0.0, 0.0] # ordem: polegar, indicador, medio, anelar, minimo (desativado , [0, 1], [2, 3], [4, 5], [6, 7])
 
-testeKIQ = ""
-
 class ServoControl():
     def __init__(self):
         
@@ -58,6 +56,8 @@ value = [0]*13
 ctrl = ServoControl()
 
 def main():
+
+    testeKIQ = ""
 
     print ("Trying to connect to Maya, ^C to cancel")
     maya_connect = maya.OpenConnection()    
