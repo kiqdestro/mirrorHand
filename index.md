@@ -46,7 +46,11 @@ Os objetivos do projeto são:
 
 O conceito do projeto consiste na utilização de múltiplos sensores, atuadores e dispositivos que possam se comunicar com o objetivo de se utilizar uma luva que possa registrar os movimentos da mão utilizando sensores de flexão dos dedos, assim como rotação da mão como um todo, e utilizar os dados obtidos para controle de uma mão robótica ou visualização externa. 
 
-A mão humana pode possui 3 articulações principais para flexão dos dedos pra flexão dos dedos. São elas: articulações interfalângicas distais, articulações interfalângicas proximais e articulações metarcapofalângicas (figura \ref{articulacoesmao}). As articulações interfalângicas são capazes apenas de movimentos de rotação de até 90 graus em apenas um eixo enquanto a última é capaz de realizar rotações de 90 graus em um eixo e 30 graus em um eixo adicional.
+A mão humana pode possui 3 articulações principais para flexão dos dedos pra flexão dos dedos. São elas: articulações interfalângicas distais, articulações interfalângicas proximais e articulações metarcapofalângicas (figura 1). As articulações interfalângicas são capazes apenas de movimentos de rotação de até 90 graus em apenas um eixo enquanto a última é capaz de realizar rotações de 90 graus em um eixo e 30 graus em um eixo adicional.
+
+![articulações da mão](articulacoesmao.jpg)
+<br>
+<small>Figura 1 - Articulações da mão</small>
 
 Utilizando-se sensores de flexão é possível capturar a quantidade de flexão em cada uma dessas articulações. Com esses dados é possível a visualização dos movimentos em um software 3D em um computador ou a replicação dos movimentos por outros dispositivos, como por exemplo uma mão robótica.
 

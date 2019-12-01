@@ -4,7 +4,7 @@
 
 ## Projeto mecânica da luva
 
-Foram construídos os sensores de fibra óptica para cada articulação e posicionados nas articulações interfalângicas proximais utilizando LEDs de baixo brilho e nas articulações metacarpofalângicas utilizando LEDs de alto brilho. As articulações correspondentes podem ser observadas na figura \ref{articulacoesmao}.
+Foram construídos os sensores de fibra óptica para cada articulação e posicionados nas articulações interfalângicas proximais utilizando LEDs de baixo brilho e nas articulações metacarpofalângicas utilizando LEDs de alto brilho.
 
 Os sensores ópticos de flexão foram costurados a uma luva de couro sintético, uma de sua extremidades ficou fixa na luva enquanto a outra foi deixada solta e foi introduzida em um tubo (também costurado na luva de maneira fixa) para permitir a livre flexão das articulações do usuário. A figura 1 apresenta a luva parcialmente construída.
 
