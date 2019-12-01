@@ -4,29 +4,24 @@
 
 ## Projeto mecânico da mão robótica
 
-A mão robótica foi obtida de um projeto de fonte aberta encontrado na internet \cite{dextrus}, e foi construída com utilização de uma impressora 3D. Como material foi utilizado plático ABS. Nas juntas de cada articulação foram utilizados rolamentos miniatura e as peças foram fixadas com parafusos.
+A mão robótica foi obtida de um projeto de fonte aberta encontrado na internet (Dextrus Hand), e foi construída com utilização de uma impressora 3D. Como material foi utilizado plático ABS. Nas juntas de cada articulação foram utilizados rolamentos miniatura e as peças foram fixadas com parafusos.
 
-\begin{figure} [htbp]
-\centering
-\includegraphics[scale=0.20]
-{./fig/maoparcial/maoparcial1.eps}
-\caption{Mão robótica parcialmente construída. Fonte: autoria própria}
-\label{maoparcial1}
-\end{figure}
+![mao robotica parcial](/maorobotica/maoparcial1.jpg)
+<br>
+<small>Figura 1 - Mão robótica parcialmente construída.</small>
+
 
 Para movimentos dos dedos foram fixadas linhas nas extremidades de cada face do dedo e presas a seus respectivos servo motores. A mão robótica é capaz apenas de dobrar todas as articulações de cada dedo de forma dependente.
 
-\begin{figure} [htbp]
-\centering
-\includegraphics[scale=0.15]
-{./fig/maoparcial/maoparcial3.eps}
-\caption{Dedo da mão robótica construído com as linhas. Fonte: autoria própria}
-\label{dedocomlinha}
-\end{figure}
+![dedo com linhas](/maorobotica/maoparcial3.jpg)
+<br>
+<small>Figura 2 - Dedo da mão robótica construído com as linhas.</small>
 
 A mão robótica, os componentes e os servomotores foram então fixados em uma placa de madeira. O resultado final pode ser observado na figura \ref{maoroboticafinal}
 
 ![mao robotica pronta](/maorobotica/maoroboticafinal.jpg)
+<br>
+<small>Figura 3 - Mão robótica terminada</small>
 
 ## Projeto de hardware da mão robótica
 
