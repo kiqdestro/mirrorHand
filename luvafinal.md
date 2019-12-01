@@ -8,7 +8,7 @@ Foram construídos os sensores de fibra óptica para cada articulação e posici
 
 Os sensores ópticos de flexão foram costurados a uma luva de couro sintético, uma de sua extremidades ficou fixa na luva enquanto a outra foi deixada solta e foi introduzida em um tubo (também costurado na luva de maneira fixa) para permitir a livre flexão das articulações do usuário. A figura 1 apresenta a luva parcialmente construída.
 
-![luva parcial](luva/luvaparcial1.jpg)
+![luva parcial](luva/maoparcial4.jpg)
 <br>
 <small>Figura 1 - Luva parcialmente construída</small>
 
@@ -34,6 +34,6 @@ A placa de saída de dados consiste em uma placa de cobre onde estão soldados o
 
 Cada saída dos divisores de tensão foi ligado a uma porta analógica do Arduino e as saídas do sensor inercial foram ligados às suas respectivas portas I2C. O diagrama final do hardware entre luva e Arduino pode ser visto na figura 4.
 
-![diagrama luva e arduino](/diagramas/dagramaluvaarduino.jpg)
+![diagrama luva e arduino](/diagramas/diagramaluvaarduino.jpg)
 <br>
 <small>Figura 4 - Diagrama de blocos do hardware da luva</small>
