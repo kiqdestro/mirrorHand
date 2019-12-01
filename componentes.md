@@ -1,37 +1,37 @@
 <!-- # [Mirror Hand](componentes.md) --> 
  
- # Componentes utilizados no projeto
+# Componentes utilizados no projeto
 
- ## Raspberry Pi Zero W
+## Raspberry Pi Zero W
 
 O Raspberry Pi Zero W é uma versão reduzida e de baixo custo da popular série de SoBs(System on a Board) Raspberry Pi. O sistema conta com um SoC(System On a Chip) com uma CPU single-core de frequência de 1GHz, 512 MB de RAM e recursos úteis para o projeto como USB OTG(On-The-Go), Bluetooth e Wifi integrados, portas GPIO(General Purpose In and Out) e comunicações serial I2C e UART possível via Bluetooth ou GPIO. A placa é alimentada por uma fonte Micro USB de 5V.
 
 ![pizerow](/componentes/pizerow.jpg)
 
- ## PCA9685
+## PCA9685
 
 Para controle dos atuadores é utilizada a placa PCA9685 em conjunto com o Raspberry Pi Zero W. Um controlador que permite enviar sinais \sigla{PWM}{Pulse-Width Modulation} com um {\itshape duty cycle} ajustável de 0\% a 100\% para controle dos atuadores. Opera com uma tensão de 2.3V a 5.5V. A placa é controlada via protocolo serial I2C\cite{datasheetpca}.
 
 
- ## Arduino Mega 2560
+## Arduino Mega 2560
 
 O Arduino Mega 2560 (figura \ref{ATmega2560}) é uma placa microcontroladora baseada no chip ATmega2560. Em contraste com outras placas Arduino, ela é designada para projetos que requerem mais portas de entrada e saída ou memória. Possui 54 pinos de entrada e saída digitais, 16 entradas analógicas e 3 portas seriais UART, saídas PWM e comunicação serial via USB. A placa pode ser alimentada por uma fonte normal ou USB de 5V ou através dos pinos de 5V e \sigla{GND}{Ground} presentes na placa \cite{arduinomega}. A pinagem do microcontrolador ATmega2560 pode ser observada na figura \ref{ATmega2560Pinout}.
 
 Em conjunto com a placa Arduino Mega 2560 foi utilizado um adaptador Bluetooth HC-06 alimentado por tensão 5V. Utiliza protocolo serial UART para comunicação. \cite{datasheethc06}
 
- ## Sensores
+## Sensores
 
- ### Sensor óptico de flexão
+### Sensor óptico de flexão
 
 Consiste em um tubo preto com um emissor de luz em uma extremidade e um sensor de luz em outra, ao ocorrer a dobra do tubo, menos luz do emissor alcança o sensor, o que causa um sinal que pode ser interpretado pelo microcontrolador \cite{opticalflexsensor}. Um diagrama simplficado do sensor pode ser visto da figura. \ref{ofs}.
 
- ### Sensor Inercial (MPU6050)
+### Sensor Inercial (MPU6050)
 
 O sensor inercial (\sigla{IMU}{Inertial Measurement Unit}) foi utilizado para medidas de rotação. É um sensor que combina um giroscópio de 3 eixos e um acelerômetro de 3 eixos e um processador digital de movimentos em um só pacote. Possui um conversor analógico digital integrado para conversão das leituras em e um buffer \sigla{FIFO}{First-In First-Out} para menor consumo de energia. Utiliza comunicação I2C e alimentação entre 2.38V e 3.47V.\cite{datasheetmpu6050}
 
- ## Atuadores
+## Atuadores
 
- ### Servomotores
+### Servomotores
 
 Servomotor é um tipo de motor muito utilizado em automação para aplicações que exigem alta precisão no controle, torques altos, pouco ruído e boa manutenção. O servomotor em questão funciona de maneira que a posição do eixo é definida de acordo com o sinal PWM recebido pelo servo, para cada valor de {\itshape duty cycle} o motor assume uma única posição. Os servomotores utilizados são do modelo SG90. Um modelo compacto e leve com alto torque e rotação de aproximadamente 180 graus (90 graus para cada direção). Possui um torque de 1.8 kgf.cm, velocidade de 0.1s/60 graus e opera a uma tensão de aproximadamente 5V \cite{datasheetsg90}. O motor é controlado através de sinais PWM
 
