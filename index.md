@@ -14,7 +14,7 @@
  
 ### Relatório Final:
 
- - [Relatório FInal](Relat_rio_final___MirrorHand_rev1.pdf)
+ - [Relatório Final](Relat_rio_final___MirrorHand_rev1.pdf)
 
 ## O Projeto 
 
