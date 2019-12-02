@@ -1,5 +1,7 @@
 <!-- # [Mirror Hand](introducao.md) -->
 
+# Introdução
+
 ### Motivação
 
 Soluções de captura de movimentos tradicionais presentes na atualidade consistem em sistemas de alto custo que utilizam grandes espaços requerendo configurações com múltiplas câmeras e trajes especializados. Mais especificamente, dispositivos capazes de capturar movimentos de mãos são oferecidos apenas para mercados e pessoas bem específicas, utilizando sensores e soluções de software proprietários extremamente caros. Alternativamente, novos softwares de reconhecimento de imagens estão sendo desenvolvidos para captura de movimentos porém ainda estão em suas fases iniciais e ainda não apresentam confiabilidade ou resultados satisfatórios.
