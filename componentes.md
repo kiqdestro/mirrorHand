@@ -31,7 +31,7 @@ Em conjunto com a placa Arduino Mega 2560 foi utilizado um adaptador Bluetooth H
 
 Consiste em um tubo preto com um emissor de luz em uma extremidade e um sensor de luz em outra, ao ocorrer a dobra do tubo, menos luz do emissor alcança o sensor, o que causa um sinal que pode ser interpretado pelo microcontrolador. Um diagrama simplficado do sensor pode ser visto da figura. 3.
 
-![pizerow](/componentes/ofd.jpg)
+![pizerow](/componentes/ofs.jpg)
 <br>
 <small>Figura 3 - Sensor óptico de flexão.</small>
 
