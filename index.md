@@ -2,7 +2,7 @@
 
 ## Uma luva capturadora de movimentos usando sensores óticos de flexão e replicação dos movimentos capturados utilizando mão robótica.
 
-### Integrantes
+### Integrantes:
 
  - Caíque Destro (1658930) - caiquedestro@gmail.com
 
@@ -16,7 +16,7 @@
 
  - [Relatório Final](Relat_rio_final___MirrorHand_rev1.pdf)
 
-## O Projeto 
+## O Projeto:
 
  - [Introdução](introducao.md)
  - [Componentes](componentes.md)
@@ -24,11 +24,13 @@
  - [Mão Mecânica](maomecanicafinal.md)
  - [Software e integração](SoftwareInt.md)
  
-## Demonstração
+## Demonstração:
 
 <video src="demonstracao1.webm" width="512" height="294" controls preload></video>
+
 <br>
-## Pré-Projeto
+## Pré-Projeto:
+
  - [Pré-projeto](preprojeto.md)
  - [Luva(Pré-projeto)](luva.md)
  - [Mão Robótica(Pré-projeto)](maomecanica.md)
