@@ -26,7 +26,7 @@
  
 ## Demonstração:
 
-<video src="demonstracao1.webm" width="512" height="294" controls preload></video>
+<video src="demonstracao1.webm" width="768" height="455" controls preload></video>
 
 <br>
 
