@@ -25,7 +25,7 @@
  
 ## Demonstração
 
-<video src="demonstracao1.webm" controls preload></video>
+<video src="demonstracao1.webm" width="512" height="294" controls preload></video>
 
 ### Motivação
 
