@@ -78,7 +78,3 @@ UART é o dispositivo que faz a conversão entre comunicação serial e comunica
 #### I2C
 
 I2C é um protocolo para interfaces de dois fios utilizado para conectar dispositivos de baixa velocidade. Utiliza as portas SDA(serial data) e SCL(serial clock) e transferêncis de 8 bits. Utiliza hierarquia mestre e escravo onde cada dispositivo possui um endereço de 7 bits. A comunicação é iniciada pelo dispositivo mestre com uma condição de início o que define se o mestre ou escravo irá escrever ou ler no barramento.
-
-![pizerow](/componentes/pizerow.jpg)
-<br>
-<small>Figura 8 - Protocolo I2C.</small>
