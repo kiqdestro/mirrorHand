@@ -30,6 +30,10 @@
 
 <br>
 
+## Diagrama de blocos:
+
+![diagramadeblocos](diagramas/diagramadeblocos.png)
+
 ## Pré-Projeto:
 
  - [Pré-projeto](preprojeto.md)
